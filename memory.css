@@ -1,0 +1,543 @@
+html {
+    display: block;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    background: url("https://res.cloudinary.com/dh41vh9dx/image/upload/v1538350067/susan-sarandon.jpg") no-repeat center center fixed;
+    background-color: #cccccc;
+    background-size: cover;
+    /* background-repeat: no-repeat; */
+    /* margin-left: 200px; */
+    
+        
+}
+
+header {
+    text-align: center;
+    width: 400px;
+}
+.page {
+    position: absolute;
+
+}
+h1{
+     
+        font-family: 'Merriweather', serif;
+        margin-top: 2vh;
+        margin-left: 17vw;
+        margin-bottom: 2vh;
+    
+}
+h4 {
+    font-family: 'Charmonman', cursive;
+    margin-top: -1vh;
+    margin-left: 17vw;
+}
+h3 {
+    font-family: 'Merriweather', serif;
+}
+h5 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 20px;
+    margin-top: 500px;
+    padding: 0;
+}
+#display-score {
+    
+}
+
+/* .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    } */
+p {
+    font-family: 'Merriweather', serif;
+
+}
+.top {
+transform: rotate(180deg);
+}
+.side {
+
+}
+.color {
+    position: fixed;
+    justify-items: center;
+    height: 100px;
+    width: 200px;
+    border-radius: 8px;
+    opacity: .9;
+    flex-grow: 1
+}
+#blue {
+    background: blue;
+    position: fixed;
+    z-index: 1;
+    top: 16.5vh;
+    left: 18.5vw;
+    border-radius: 50px 50px 20px 20px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2em;
+    color: rgb(6, 6, 105)
+    
+}
+#blue:focus {
+    animation: grow .3s;
+}
+#blue:active{
+    background: rgb(33, 187, 238);
+}
+#red {
+    z-index: 2;
+    background: red;
+    
+    left: 26.5vw;
+    transform: rotate(-90deg) translate(0, -100%);
+    transform-origin: 100% 0;
+    border-radius: 20px 20px 50px 50px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2em;
+    color: rgb(175, 5, 5)
+}
+#red:focus {
+    animation: grow .3s;
+}
+#red:active{
+    background: rgb(247, 50, 188);
+}
+#green {
+    z-index: 3;
+    background: green;
+    top: 62.5vh;
+    left: 18.5vw;
+    border-radius: 20px 20px 50px 50px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2em;
+    color: rgb(2, 83, 2)
+    
+}
+#green:focus {
+    animation: grow .3s;
+}
+#green:active {
+    background: rgb(132, 216, 7);
+}
+#purple {
+    z-index: 4;
+    background: purple;
+    left: 3vw;
+    transform: rotate(-90deg) translate(0, -100%);
+    transform-origin: 100% 0;
+    border-radius: 50px 50px 20px 20px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2em;
+    color: rgb(92, 2, 92)
+    
+}
+#purple:focus {
+    animation: grow .3s;
+}
+#purple:active {
+    background: rgb(236, 24, 236);
+}
+#go {
+    z-index: 1;
+    background: black;
+    height: 100px;
+    width: 140px;
+    border-radius: 45%;
+    top: 40vh;
+    left: 21vw;   
+    color: white;
+    font-size: 3em;
+    font-family: 'Orbitron', sans-serif;
+}
+#go:focus {
+    animation: goGrow .2s;
+}
+#go:active {
+    background: rgb(48, 45, 45)
+}
+#background {
+    z-index: 5;
+    top: -20px;
+    left: -23px;
+    height: 390px;
+    width: 446px;
+    border-radius: 45%;
+    background: grey;
+    border: 1.5px solid black;
+    opacity: .8;
+}
+.blink {
+    animation: blink .5s; 
+}
+@keyframes grow {
+    from {
+      height: 100px;
+      width: 200px;
+    } to {
+      height: 115px;
+      width: 220px;
+    }
+   }
+@keyframes goGrow {
+    from {
+    height: 100px;
+    width: 140px;
+    } to {
+    height: 110px;
+    width: 160px;
+    }
+}
+@keyframes blinkBlue {
+    from {background-color: blue;}
+    to {background-color: rgb(33, 187, 238);}
+}
+@keyframes blinkRed {
+    from {background-color: red;}
+    to {background-color: rgb(247, 100, 203);}
+}
+@keyframes blinkGreen {
+    from {background-color: green;}
+    to {background-color: rgb(132, 216, 7);}
+}
+@keyframes blinkPurple {
+    from {background-color: purple;}
+    to {background-color: rgb(211, 30, 211);}
+}
+
+/* How to make a class active 
+https://www.w3schools.com/howto/howto_js_active_element.asp */
+
+.activeB {
+    animation: blinkBlue .5s;
+      
+  }
+  .activeR {
+    animation: blinkRed .5s; 
+       
+  }
+  .activeG {
+    animation: blinkGreen .5s;  
+      
+  }
+  .activeP {
+    animation: blinkPurple .5s; 
+       
+  }
+  .score {
+      margin-top: 50px;
+      margin-bottom: 5px;
+  }
+  #display-score {
+      margin-top: 300px;
+  }
+
+  .alert {
+    margin-top: 800px;
+    border: whitesmoke solid 2px;
+    background-color: #99a036;
+    color: black;
+    opacity: 1;
+    transition: opacity 0.6s;
+    display: none; 
+    animation: expandAlert 1.5s ease-in-out forwards;
+}
+@keyframes expandAlert {
+    from { padding: 5px }
+    to {  padding: 60px }
+}
+.page {
+    position: absolute;
+
+}
+#page1 {
+    
+    visibility: visible;
+    height: 300px;
+    width: 400px;
+    background-color: white;
+    opacity: .2;
+    text-align: center;
+}
+#page2 {
+    visibility: hidden;
+    widows: 400px;
+}
+#page3 {
+    visibility: hidden;
+}
+.button {
+    height: 50px;
+    width: 120px;
+    border: solid 1px black;
+    background-color: #99a036;
+    border-radius: 6px;
+}
+.theseButtons{
+    padding-top: 65vh;
+    padding-left: 10vw;
+   
+}
+a{
+    text-decoration: none; 
+    color: black;
+}
+a:hover {
+    font-weight:bold;
+    color: white;
+}
+
+.page-container{
+    height: 100vh;
+}
+
+
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: landscape) { 
+    .color {
+        position: fixed;
+        justify-items: center;
+        margin-top: 15vh;
+        margin-left: 3vw;
+        height: 24vh;
+        width: 20vw;
+        border-radius: 8px;
+        opacity: .9;
+        flex-grow: 1;
+    }
+    #blue {
+        background: blue;
+        position: fixed;
+        z-index: 1;
+        top: 1vh;
+        left: 100px;
+        border-radius: 50px 50px 20px 20px;
+        font-family: 'Orbitron', sans-serif;
+        font-size: 2em;
+        color: rgb(6, 6, 105);
+    }
+    #green {
+        z-index: 3;
+        background: green;
+        top: 200px;
+        left: 100px;
+        border-radius: 20px 20px 50px 50px;
+        font-family: 'Orbitron', sans-serif;
+        font-size: 2em;
+        color: rgb(2, 83, 2);
+    }
+    #go {
+        z-index: 1;
+        background: black;
+        height: 100px;
+        width: 140px;
+        border-radius: 45%;
+        top: 100px;
+        left: 13.5vw;
+        color: white;
+        font-size: 3em;
+        font-family: 'Orbitron', sans-serif;
+    }
+    #purple {
+        z-index: 4;
+        background: purple;
+        top: 70px;
+        left: -7.8vw;
+        transform: rotate(-90deg) translate(0, -100%);
+        transform-origin: 100% 0;
+        border-radius: 50px 50px 20px 20px;
+        font-family: 'Orbitron', sans-serif;
+        font-size: 2em;
+        color: rgb(92, 2, 92);
+    }
+    #red {
+        z-index: 2;
+        background: red;
+        top: 70px;
+        left: 23.5vw;
+        transform: rotate(-90deg) translate(0, -100%);
+        transform-origin: 100% 0;
+        border-radius: 20px 20px 50px 50px;
+        font-family: 'Orbitron', sans-serif;
+        font-size: 2em;
+        color: rgb(175, 5, 5);
+    }
+    h1 {
+        font-size: 1.3em;
+        
+            font-family: 'Merriweather', serif;
+            margin-top: 0vh;
+            
+            margin-bottom: 0vh;
+        }
+    
+}
+
+
+
+.theseButtons {
+    padding-top: none;
+    padding-left: none;
+}
+
+    @media only screen 
+    and (min-device-width: 375px) 
+    and (max-device-width: 667px) 
+    and (-webkit-min-device-pixel-ratio: 2)
+    and (orientation: landscape) { 
+      .color {
+          position: fixed;
+          justify-items: center;
+          margin-top: 15vh;
+          margin-left: 3vw;
+          height: 22vh;
+          width: 24vw;;
+          border-radius: 8px;
+          opacity: .9;
+          flex-grow: 1;
+      }
+      #blue {
+          background: blue;
+          position: fixed;
+          z-index: 1;
+          top: 1vh;
+          left: 13vw;
+          border-radius: 50px 50px 20px 20px;
+          font-family: 'Orbitron', sans-serif;
+          font-size: 2em;
+          color: rgb(6, 6, 105);
+      }
+      #green {
+          z-index: 3;
+          background: green;
+          top: 200px;
+          left: 13VW;
+          border-radius: 20px 20px 50px 50px;
+          font-family: 'Orbitron', sans-serif;
+          font-size: 2em;
+          color: rgb(2, 83, 2);
+      }
+      #go {
+          z-index: 1;
+          background: black;
+          height: 100px;
+          width: 140px;
+          border-radius: 45%;
+          top: 24.5vh;
+          left: 14.5vw;
+          color: white;
+          font-size: 3em;
+          font-family: 'Orbitron', sans-serif;
+      }
+      #purple {
+          z-index: 4;
+          background: purple;
+          top: 70px;
+          left: -11vw;
+          transform: rotate(-90deg) translate(0, -100%);
+          transform-origin: 100% 0;
+          border-radius: 50px 50px 20px 20px;
+          font-family: 'Orbitron', sans-serif;
+          font-size: 2em;
+          color: rgb(92, 2, 92);
+      }
+      #red {
+          z-index: 2;
+          background: red;
+          top: 70px;
+          left: 25.2vw;
+          transform: rotate(-90deg) translate(0, -100%);
+          transform-origin: 100% 0;
+          border-radius: 20px 20px 50px 50px;
+          font-family: 'Orbitron', sans-serif;
+          font-size: 2em;
+          color: rgb(175, 5, 5);
+      }
+      h1 {
+          font-size: 1.3em;
+      }
+  }
+
+
+
+
+
+
+
+
+/* }
+@media only screen and (max-width:667px){
+    .color {
+        height: 50px;
+        width: 100px;
+
+    }
+    #green{
+        top: 65px;
+        left: -98px;
+    }
+    #red {
+        top: -35px;
+        left: -45px
+
+    }
+    #purple {
+        top: -35px;
+        left: -200px
+    }
+    #blue {
+        left: -100px;
+        top: -90px;
+    }
+    #go {
+        height: 65px;
+    
+        left: -92px;
+        top: -25px;
+    }
+    #page2 {
+        visibility: hidden
+    }
+    #page1  
+}
+#page1 {
+    
+    visibility: visible;
+    height: 300px;
+    width: 400px;
+    background-color: white;
+    opacity: .5;
+    text-align: center;
+}
+.theseButtons {
+    padding-top: 150px;
+    margin-left: -180px;
+}
+.button {
+    height: 50px;
+    width: 80px;
+    border: solid 1px black;
+    background-color: #99a036;
+    border-radius: 6px;
+}
+#display-score {
+    margin-top: 100px;
+    font-size: 14px;
+    color: whitesmoke;
+}
+h1 {
+    
+    color: whitesmoke;
+}
+h4{
+    color: whitesmoke;
+    font-size: 12px;
+} */

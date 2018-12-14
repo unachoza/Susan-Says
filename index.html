@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <title>Susan</title>
+ <link rel="stylesheet" href="memory.css">
+ <link href="https://fonts.googleapis.com/css?family=Charmonman|Merriweather|Orbitron" rel="stylesheet">
+ 
+ </head>
+ <body>
+     <div class="page-container">
+        <header>
+            <h1>Susan Says</h1>
+            <h4>a memory game</h4>
+        </header>
+        <main>
+            <div class='page' id="page1">
+                <h3>Instructions</h3>
+                <p>In effort to encourage more people to listen to women, I present to you Susan Says. Press the Black Go Button in the center and listen as Susan flashes a sequence of colors. Repeat the color pattern, by clicking the color buttons in the same order as Susan's Sequence. If your sequence matches, press the Next Level Button and the sequence will be longer. If your sequence does not match Susan's, you lose the game and the Next Level Button will be disabled. Score points by getting the sequence correct. Remember what Susan told you!  </p>
+                <input type="text">
+            </div>
+            <div class="alert">Your Score:</div>
+            <div class='page' id="page2">
+                <div class="susan-container">
+                    <button class="color" class="top" id="blue">Blue</button>
+                    <button class="color" class="top" id="green">Green</button>
+                    <br>
+                    <button class ="color"id="go">Go</button> 
+                    <button class="color" class ="side" id="purple">Purple</button>
+                    <button class="color" class ="side" id="red">Red</button>
+                </div>
+                <h5 id='display-score'>0000 points<br>
+                Your Score</h5>
+            </div>
+            <br>
+            <div class='page' id="page3">
+            <!-- <h1>High Scores:</h1> -->
+            </div>
+            <div class="theseButtons">
+                <button class= "button" id="playbutton">Play Game</button>
+                <button class ="button" id ="nextLevel">Next Level</button>
+                <button class ="button" id="restart">Restart the Game</button>
+            </div>
+        </main>
+    </div>
+    <h4><a href="https://www.linkedin.com/in/arianna-choza-37a44762/" target="blank">created by arianna choza</a></h4>
+     
+     <script src="memoryscript.js"></script>
+     <script type="text/javascript" src="js/materialize.min.js"></script>
+     </body>
+ </html>

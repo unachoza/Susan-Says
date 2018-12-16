@@ -4,31 +4,23 @@
   var audioG = document.getElementById("greenAudio")
   var audioP = document.getElementById("purpleAudio")
 
-// var bImages = document.getElementsByClassName('bImages')
-// console.log({bImages})
-
 let bImages = [
-     "file:///Users/ariannaluchachoza/Desktop/ALL%20FOLDERS/Code/Baby%20Developer/Susan-Says/images/susan-sarandon.jpg",
-     "file:///Users/ariannaluchachoza/Desktop/ALL%20FOLDERS/Code/Baby%20Developer/Susan-Says/images/maya-angula.jpg",
-     "file:///Users/ariannaluchachoza/Desktop/ALL%20FOLDERS/Code/Baby%20Developer/Susan-Says/images/frida%20K.jpg",
-     "file:///Users/ariannaluchachoza/Desktop/ALL%20FOLDERS/Code/Baby%20Developer/Susan-Says/images/gloria_st.jpg",
-      "file:///Users/ariannaluchachoza/Desktop/ALL%20FOLDERS/Code/Baby%20Developer/Susan-Says/images/AlexiandraOC.png",
-      "file:///Users/ariannaluchachoza/Desktop/ALL%20FOLDERS/Code/Baby%20Developer/Susan-Says/images/RBG.png",
-      "file:///Users/ariannaluchachoza/Desktop/ALL%20FOLDERS/Code/Baby%20Developer/Susan-Says/images/SerenaW.png",
-      "file:///Users/ariannaluchachoza/Desktop/ALL%20FOLDERS/Code/Baby%20Developer/Susan-Says/images/Indra.png",
-      "file:///Users/ariannaluchachoza/Desktop/ALL%20FOLDERS/Code/Baby%20Developer/Susan-Says/images/anita_hill.png",
-      "file:///Users/ariannaluchachoza/Desktop/ALL%20FOLDERS/Code/Baby%20Developer/Susan-Says/images/Merkle.png",
-      "file:///Users/ariannaluchachoza/Desktop/ALL%20FOLDERS/Code/Baby%20Developer/Susan-Says/images/Madonna.png",
-     "file:///Users/ariannaluchachoza/Desktop/ALL%20FOLDERS/Code/Baby%20Developer/Susan-Says/images/JuleyD.png",
-     "file:///Users/ariannaluchachoza/Desktop/ALL%20FOLDERS/Code/Baby%20Developer/Susan-Says/images/Malala.png",
-     "file:///Users/ariannaluchachoza/Desktop/ALL%20FOLDERS/Code/Baby%20Developer/Susan-Says/images/Michelle_o.png",
-     "file:///Users/ariannaluchachoza/Desktop/ALL%20FOLDERS/Code/Baby%20Developer/Susan-Says/images/SandraO.png",
-     "file:///Users/ariannaluchachoza/Desktop/ALL%20FOLDERS/Code/Baby%20Developer/Susan-Says/images/oprah.png"
-
-
-
-
-
+    "file:///Users/ariannaluchachoza/Desktop/ALL%20FOLDERS/Code/Baby%20Developer/Susan-Says/images/susan-sarandon.jpg",
+    "file:///Users/ariannaluchachoza/Desktop/ALL%20FOLDERS/Code/Baby%20Developer/Susan-Says/images/maya-angula.jpg",
+    "file:///Users/ariannaluchachoza/Desktop/ALL%20FOLDERS/Code/Baby%20Developer/Susan-Says/images/frida%20K.jpg",
+    "file:///Users/ariannaluchachoza/Desktop/ALL%20FOLDERS/Code/Baby%20Developer/Susan-Says/images/gloria_st.jpg",
+    "file:///Users/ariannaluchachoza/Desktop/ALL%20FOLDERS/Code/Baby%20Developer/Susan-Says/images/AlexiandraOC.png",
+    "file:///Users/ariannaluchachoza/Desktop/ALL%20FOLDERS/Code/Baby%20Developer/Susan-Says/images/RBG.png",
+    "file:///Users/ariannaluchachoza/Desktop/ALL%20FOLDERS/Code/Baby%20Developer/Susan-Says/images/SerenaW.png",
+    "file:///Users/ariannaluchachoza/Desktop/ALL%20FOLDERS/Code/Baby%20Developer/Susan-Says/images/Indra.png",
+    "file:///Users/ariannaluchachoza/Desktop/ALL%20FOLDERS/Code/Baby%20Developer/Susan-Says/images/anita_hill.png",
+    "file:///Users/ariannaluchachoza/Desktop/ALL%20FOLDERS/Code/Baby%20Developer/Susan-Says/images/Merkle.png",
+    "file:///Users/ariannaluchachoza/Desktop/ALL%20FOLDERS/Code/Baby%20Developer/Susan-Says/images/Madonna.png",
+    "file:///Users/ariannaluchachoza/Desktop/ALL%20FOLDERS/Code/Baby%20Developer/Susan-Says/images/JuleyD.png",
+    "file:///Users/ariannaluchachoza/Desktop/ALL%20FOLDERS/Code/Baby%20Developer/Susan-Says/images/Malala.png",
+    "file:///Users/ariannaluchachoza/Desktop/ALL%20FOLDERS/Code/Baby%20Developer/Susan-Says/images/Michelle_o.png",
+    "file:///Users/ariannaluchachoza/Desktop/ALL%20FOLDERS/Code/Baby%20Developer/Susan-Says/images/SandraO.png",
+    "file:///Users/ariannaluchachoza/Desktop/ALL%20FOLDERS/Code/Baby%20Developer/Susan-Says/images/oprah.png"
  ]
 
   let colorNum = [0]
@@ -56,7 +48,7 @@ let bImages = [
     endAlert.style.display = 'none';
     score = 0
     userScore.innerHTML = score
-    document.getElementById('nextLevel').disabled = false
+    //document.getElementById('nextLevel').disabled = false
     colorNum = 0
   })
   playButton.addEventListener('click', function () {
@@ -148,8 +140,6 @@ let bImages = [
       }
     }
 
-
-
     function winOrLoseAfter(colorNum, user) {
       let loser = false
       if (user.length === colorNum.length) {
@@ -167,7 +157,7 @@ let bImages = [
             //endAlert.style.display = 'none';
             endAlert.style.display = 'inline';
             document.getElementById('nextLevel').disabled = true
-            document.getElementById('playGame').disabled = false
+            //document.getElementById('playGame').disabled = false
             break
           }
         }
@@ -186,33 +176,26 @@ let bImages = [
       }
 
     }
-    var i =0
+   
     // images are being called, syntax is correct, having trouble looping 
     // next Level, goes to page2 and adds 1 to sequence 
-    
-    document.getElementById('nextLevel').addEventListener('click', function () {
-      i += 1
+    var i = 0 
+    document.getElementById('nextLevel').addEventListener('click',  (e) => {
+      e.stopPropagation()
+      user = []
+      i ++
       console.log(i)
       document.body.style.background = `url(${bImages[i]})`
       gamePage.style.visibility = "visible"
       endAlert.style.visibility = "hidden"
       console.log('next level has been reached')
-        user = []
-        // console.log("the score is", score,"the number of colors is", colorNum)
     })
 
-
-
-    /* High Score Leader Board*/
-
-    /* TO DO LIST*
-    // 4. Alerts display "win next levelt"; 'fail display score"
-    // 6. Build High Score Board
-    8. Transitions for Win/lose Alerts
-    // 10. high score board logic 
-    11. Add background img of impressive women speaking, change img every level
-    13. lock buttons
+    /* High Score Leader Board
+    Alerts display "win next levelt"; 'fail display score"
+    Build High Score Board
+    Transitions for Win/lose Alerts
+    High score board logic 
+    Add background img of impressive women speaking, change img every level
      */
   })
-
-

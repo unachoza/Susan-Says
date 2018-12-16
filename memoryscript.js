@@ -8,10 +8,27 @@
 // console.log({bImages})
 
 let bImages = [
-     "https://res.cloudinary.com/dh41vh9dx/image/upload/v1538350067/susan-sarandon.jpg",
-     "https://res.cloudinary.com/dh41vh9dx/image/upload/v1538348194/maya-angula.jpg",
-     "https://res.cloudinary.com/dh41vh9dx/image/upload/v1538344728/frida_K.jpg",
-     "https://res.cloudinary.com/dh41vh9dx/image/upload/v1538347728/gloria_st.jpg" 
+     "file:///Users/ariannaluchachoza/Desktop/ALL%20FOLDERS/Code/Baby%20Developer/Susan-Says/images/susan-sarandon.jpg",
+     "file:///Users/ariannaluchachoza/Desktop/ALL%20FOLDERS/Code/Baby%20Developer/Susan-Says/images/maya-angula.jpg",
+     "file:///Users/ariannaluchachoza/Desktop/ALL%20FOLDERS/Code/Baby%20Developer/Susan-Says/images/frida%20K.jpg",
+     "file:///Users/ariannaluchachoza/Desktop/ALL%20FOLDERS/Code/Baby%20Developer/Susan-Says/images/gloria_st.jpg",
+      "file:///Users/ariannaluchachoza/Desktop/ALL%20FOLDERS/Code/Baby%20Developer/Susan-Says/images/AlexiandraOC.png",
+      "file:///Users/ariannaluchachoza/Desktop/ALL%20FOLDERS/Code/Baby%20Developer/Susan-Says/images/RBG.png",
+      "file:///Users/ariannaluchachoza/Desktop/ALL%20FOLDERS/Code/Baby%20Developer/Susan-Says/images/SerenaW.png",
+      "file:///Users/ariannaluchachoza/Desktop/ALL%20FOLDERS/Code/Baby%20Developer/Susan-Says/images/Indra.png",
+      "file:///Users/ariannaluchachoza/Desktop/ALL%20FOLDERS/Code/Baby%20Developer/Susan-Says/images/anita_hill.png",
+      "file:///Users/ariannaluchachoza/Desktop/ALL%20FOLDERS/Code/Baby%20Developer/Susan-Says/images/Merkle.png",
+      "file:///Users/ariannaluchachoza/Desktop/ALL%20FOLDERS/Code/Baby%20Developer/Susan-Says/images/Madonna.png",
+     "file:///Users/ariannaluchachoza/Desktop/ALL%20FOLDERS/Code/Baby%20Developer/Susan-Says/images/JuleyD.png",
+     "file:///Users/ariannaluchachoza/Desktop/ALL%20FOLDERS/Code/Baby%20Developer/Susan-Says/images/Malala.png",
+     "file:///Users/ariannaluchachoza/Desktop/ALL%20FOLDERS/Code/Baby%20Developer/Susan-Says/images/Michelle_o.png",
+     "file:///Users/ariannaluchachoza/Desktop/ALL%20FOLDERS/Code/Baby%20Developer/Susan-Says/images/SandraO.png",
+     "file:///Users/ariannaluchachoza/Desktop/ALL%20FOLDERS/Code/Baby%20Developer/Susan-Says/images/oprah.png"
+
+
+
+
+
  ]
 
   let colorNum = [0]
@@ -46,7 +63,7 @@ let bImages = [
     console.log('I was clicked')
     instructionsPage.style.visibility = 'hidden'
     gamePage.style.visibility = 'visible'
-    body.style.opacity = 10;
+    //body.style.opacity = 10;
   })
 
   //making buttons objects
@@ -169,25 +186,19 @@ let bImages = [
       }
 
     }
-
-
+    var i =0
+    // images are being called, syntax is correct, having trouble looping 
     // next Level, goes to page2 and adds 1 to sequence 
+    
     document.getElementById('nextLevel').addEventListener('click', function () {
-      console.log('next level')
-   for(let i =0 ; i<bImages.length; i++){
-       console.log(bImages)
-  document.body.style.backgroundImage = "url(bImages[i])"
-   }
+      i += 1
+      console.log(i)
+      document.body.style.background = `url(${bImages[i]})`
       gamePage.style.visibility = "visible"
       endAlert.style.visibility = "hidden"
       console.log('next level has been reached')
-      //   endAlert.style.visibility = "hidden"
-
-      user = []
-      //instructionsPage.stye.visibility = "hidden"
-
-
-      // console.log("the score is", score,"the number of colors is", colorNum)
+        user = []
+        // console.log("the score is", score,"the number of colors is", colorNum)
     })
 
 

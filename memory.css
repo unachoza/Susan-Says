@@ -7,10 +7,8 @@ body{
     background: url("https://res.cloudinary.com/dh41vh9dx/image/upload/v1538350067/susan-sarandon.jpg") no-repeat center center fixed;
     background-color: #cccccc;
     background-size: cover;
-    /* background-repeat: no-repeat; */
+    background-repeat: no-repeat;
     /* margin-left: 200px; */
-    
-        
 }
 
 header {
@@ -19,15 +17,12 @@ header {
 }
 .page {
     position: absolute;
-
 }
 h1{
-     
         font-family: 'Merriweather', serif;
         margin-top: 2vh;
         margin-left: 17vw;
         margin-bottom: 2vh;
-    
 }
 h4 {
     font-family: 'Charmonman', cursive;
@@ -44,9 +39,7 @@ h5 {
     padding: 0;
 }
 #display-score {
-    
 }
-
 /* .container {
     display: flex;
     justify-content: center;
@@ -144,16 +137,17 @@ transform: rotate(180deg);
     background: rgb(236, 24, 236);
 }
 #go {
-    z-index: 1;
-    background: black;
-    height: 100px;
-    width: 140px;
-    border-radius: 45%;
-    top: 40vh;
-    left: 21vw;   
-    color: white;
-    font-size: 3em;
-    font-family: 'Orbitron', sans-serif;
+    margin-top: -8vh;
+        z-index: 1;
+        background: black;
+        height: 120px;
+        width: 180px;
+        border-radius: 45%;
+        top: 40vh;
+        left: 19.5vw;
+        color: white;
+        font-size: 3em;
+        font-family: 'Orbitron', sans-serif;
 }
 #go:focus {
     animation: goGrow .2s;
@@ -258,8 +252,9 @@ https://www.w3schools.com/howto/howto_js_active_element.asp */
 #page1 {
     
     visibility: visible;
-    height: 300px;
+    height: 225px;
     width: 400px;
+    margin-left: 8vw;
     background-color: white;
     opacity: .2;
     text-align: center;
@@ -277,6 +272,8 @@ https://www.w3schools.com/howto/howto_js_active_element.asp */
     border: solid 1px black;
     background-color: #99a036;
     border-radius: 6px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 18px;
 }
 .theseButtons{
     padding-top: 65vh;
@@ -335,13 +332,14 @@ a:hover {
         color: rgb(2, 83, 2);
     }
     #go {
+        margin-top: -8vh;
         z-index: 1;
         background: black;
-        height: 100px;
-        width: 140px;
+        height: 120px;
+        width: 180px;
         border-radius: 45%;
-        top: 100px;
-        left: 13.5vw;
+        top: 40vh;
+        left: 19.5vw;
         color: white;
         font-size: 3em;
         font-family: 'Orbitron', sans-serif;

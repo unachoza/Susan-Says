@@ -101,7 +101,6 @@ let bImages = [
         setTimeout(function () {
           whichColorBlinks(colorNum[i]);
         }, i * 500);
-
       }
     }
     susanBlink(colorNum)
@@ -174,9 +173,7 @@ let bImages = [
           susanBlink(colorNum)
         }
       }
-
     }
-   
     // images are being called, syntax is correct, having trouble looping 
     // next Level, goes to page2 and adds 1 to sequence 
     var i = 0 
@@ -190,7 +187,6 @@ let bImages = [
       endAlert.style.visibility = "hidden"
       console.log('next level has been reached')
     })
-
     /* High Score Leader Board
     Alerts display "win next levelt"; 'fail display score"
     Build High Score Board

@@ -104,7 +104,7 @@ transform: rotate(180deg);
 #green {
     z-index: 3;
     background: green;
-    top: 62.5vh;
+    top: 50vh;
     left: 18.5vw;
     border-radius: 20px 20px 50px 50px;
     font-family: 'Orbitron', sans-serif;
@@ -268,7 +268,6 @@ https://www.w3schools.com/howto/howto_js_active_element.asp */
 }
 .button {
     height: 50px;
-    width: 120px;
     border: solid 1px black;
     background-color: #99a036;
     border-radius: 6px;
@@ -276,7 +275,7 @@ https://www.w3schools.com/howto/howto_js_active_element.asp */
     font-size: 18px;
 }
 .theseButtons{
-    padding-top: 65vh;
+    padding-top: 55vh;
     padding-left: 10vw;
    
 }
@@ -465,10 +464,19 @@ a:hover {
   }
 
 
+  @media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) { 
 
 
+      body {
+          background: url(https://res.cloudinary.com/dh41vh9dx/image/upload/v1545059996/Landscape-Mode.png) no-repeat center center fixed
+      }
 
 
+    }
 
 
 /* }

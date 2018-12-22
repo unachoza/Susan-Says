@@ -51,6 +51,7 @@ let bImages = [
     //document.getElementById('nextLevel').disabled = false
     colorNum = 0
   })
+
   playButton.addEventListener('click', function () {
     console.log('I was clicked')
     instructionsPage.style.visibility = 'hidden'
@@ -180,9 +181,9 @@ let bImages = [
     document.getElementById('nextLevel').addEventListener('click',  (e) => {
       e.stopPropagation()
       user = []
-      i ++
+      i++
       console.log(i)
-      document.body.style.background = `url(${bImages[i]})`
+      //document.body.style.background = `url(${bImages[i]})`
       gamePage.style.visibility = "visible"
       endAlert.style.visibility = "hidden"
       console.log('next level has been reached')
@@ -194,4 +195,10 @@ let bImages = [
     High score board logic 
     Add background img of impressive women speaking, change img every level
      */
+  })
+  var i = 0
+  document.getElementById('nextLevel').addEventListener('click', () => {
+    console.log("this next level button", i)
+    i += 1
+    document.body.style.background = `url(${bImages[i]})`
   })

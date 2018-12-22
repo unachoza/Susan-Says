@@ -472,7 +472,9 @@ a:hover {
 
 
       body {
-          background: url(https://res.cloudinary.com/dh41vh9dx/image/upload/v1545059996/Landscape-Mode.png) no-repeat center center fixed
+          background: url(https://res.cloudinary.com/dh41vh9dx/image/upload/v1545059996/Landscape-Mode.png) no-repeat center center fixed;
+          background-size: contain;
+          background-color: black;
       }
 
 

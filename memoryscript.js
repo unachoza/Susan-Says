@@ -201,4 +201,7 @@ let bImages = [
     console.log("this next level button", i)
     i += 1
     document.body.style.background = `url(${bImages[i]})`
+    document.body.style.backgroundSize = "cover"
+    document.body.style.backgroundRepeat = "no-reapeat"
+  
   })

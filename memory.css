@@ -1,3 +1,7 @@
+img, embed, object, video {
+    max-width: 100%;
+}
+
 html {
     display: block;
 }
@@ -51,6 +55,10 @@ p {
     font-family: 'Merriweather', serif;
 
 }
+.susan-container {
+    height: 350px;
+    width: 500px;
+}
 .top {
 transform: rotate(180deg);
 }
@@ -58,7 +66,7 @@ transform: rotate(180deg);
 
 }
 .color {
-    position: fixed;
+    /* position: fixed; */
     justify-items: center;
     height: 100px;
     width: 200px;

@@ -1,9 +1,4 @@
-  //Intro this project is personal to me because it's a memory game and I love memory games. I played video games as a child, but not currently, so the nostolga is real. 
-  var audioR = document.getElementById("redAudio")
-  var audioB = document.getElementById("blueAudio")
-  var audioG = document.getElementById("greenAudio")
-  var audioP = document.getElementById("purpleAudio")
-
+  //Intro this project is personal to me because it's a memory game with a healthy dose of feminism.
 let bImages = [
     "file:///Users/ariannaluchachoza/Desktop/ALL%20FOLDERS/Code/Baby%20Developer/Susan-Says/images/susan-sarandon.jpg",
     "file:///Users/ariannaluchachoza/Desktop/ALL%20FOLDERS/Code/Baby%20Developer/Susan-Says/images/maya-angula.jpg",
@@ -48,15 +43,13 @@ let bImages = [
     endAlert.style.display = 'none';
     score = 0
     userScore.innerHTML = score
-    //document.getElementById('nextLevel').disabled = false
     colorNum = 0
   })
 
   playButton.addEventListener('click', function () {
-    console.log('I was clicked')
+    console.log('playButton was clicked')
     instructionsPage.style.visibility = 'hidden'
     gamePage.style.visibility = 'visible'
-    //body.style.opacity = 10;
   })
 
   //making buttons objects
@@ -85,7 +78,6 @@ let bImages = [
       for (let i = 0; i < buttons.length - 1; i++) {
         buttons[i]['dom'].addEventListener('click', function () {
           user.push(buttons[i]["value"])
-          console.log(user)
           winOrLoseAfter(colorNum, user)
         })
       }
@@ -95,7 +87,7 @@ let bImages = [
     element = Math.floor(Math.random() * 4)
     colorNum.push(element)
 
-    console.log(colorNum)
+    console.log("Susan array" , colorNum)
 
     function susanBlink(colorNum) {
       for (let i = 0; i < colorNum.length; i++) {
@@ -110,32 +102,27 @@ let bImages = [
       switch (colorNum) {
         case 0:
           document.getElementById('red').classList.add('activeR')
-          // playRedAudio()
           setTimeout(function () {
             document.getElementById('red').classList.remove('activeR')
-          }, 300)
+          }, 400)
           break;
         case 1:
           document.getElementById('blue').classList.add('activeB')
-          // playBlueAudio()
           setTimeout(function () {
             document.getElementById('blue').classList.remove('activeB')
-          }, 300)
+          }, 400)
           break;
         case 2:
           document.getElementById('green').classList.add('activeG')
-          // playGreenAudio()
           setTimeout(function () {
             document.getElementById('green').classList.remove('activeG')
-          }, 300)
+          }, 400)
           break;
         case 3:
-
           document.getElementById('purple').classList.add('activeP')
-          // playPurpleAudio()
           setTimeout(function () {
             document.getElementById('purple').classList.remove('activeP')
-          }, 300)
+          }, 400)
           break;
       }
     }
@@ -143,6 +130,7 @@ let bImages = [
     function winOrLoseAfter(colorNum, user) {
       let loser = false
       if (user.length === colorNum.length) {
+        console.log("user array", user)
         console.log('time to check winner')
         for (let i = 0; i < colorNum.length; i++) {
           if (colorNum[i] !== user[i]) {
@@ -196,7 +184,7 @@ let bImages = [
     Add background img of impressive women speaking, change img every level
      */
   })
-  var i = 0
+  var i = 3
   document.getElementById('nextLevel').addEventListener('click', () => {
     console.log("this next level button", i)
     i += 1

@@ -258,11 +258,12 @@ https://www.w3schools.com/howto/howto_js_active_element.asp */
 #page1 {
     
     visibility: visible;
-    height: 300px;
+    border-radius: 10px;
     width: 400px;
     background-color: white;
-    opacity: .2;
+    opacity: .35;
     text-align: center;
+    margin-left: 8vw;
 }
 #page2 {
     visibility: hidden;
@@ -273,14 +274,16 @@ https://www.w3schools.com/howto/howto_js_active_element.asp */
 }
 .button {
     height: 50px;
-    width: 120px;
-    border: solid 1px black;
-    background-color: #99a036;
-    border-radius: 6px;
+     border: solid 1px black;
+     background-color: #99a036;
+     border-radius: 6px;
+     font-family: 'Orbitron', sans-serif;
+     font-size: 18px;
 }
 .theseButtons{
-    padding-top: 65vh;
-    padding-left: 10vw;
+    padding-top: 55vh;
+    padding-left: 8vw;
+    padding-bottom: 3vh;
    
 }
 a{

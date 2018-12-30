@@ -165,13 +165,13 @@ let bImages = [
     }
     // images are being called, syntax is correct, having trouble looping 
     // next Level, goes to page2 and adds 1 to sequence 
-    var i = 0 
-    document.getElementById('nextLevel').addEventListener('click',  (e) => {
-      e.stopPropagation()
-      user = []
-      i++
-      console.log(i)
-      //document.body.style.background = `url(${bImages[i]})`
+
+    
+    document.getElementById('nextLevel').addEventListener('click', function () {
+      // i += 1
+      // console.log(i)
+      // document.body.style.background = `url(${bImages[i]})`
+
       gamePage.style.visibility = "visible"
       endAlert.style.visibility = "hidden"
       console.log('next level has been reached')
@@ -184,12 +184,15 @@ let bImages = [
     Add background img of impressive women speaking, change img every level
      */
   })
-  var i = 3
+
+  var i = 0
+
   document.getElementById('nextLevel').addEventListener('click', () => {
     console.log("this next level button", i)
     i += 1
     document.body.style.background = `url(${bImages[i]})`
     document.body.style.backgroundSize = "cover"
-    document.body.style.backgroundRepeat = "no-reapeat"
-  
-  })
+
+    document.body.style.backgroundRepeat = "no-reapeat" 
+  }) 
+

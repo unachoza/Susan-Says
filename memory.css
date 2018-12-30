@@ -78,7 +78,7 @@ transform: rotate(180deg);
     background: blue;
     position: fixed;
     z-index: 1;
-    top: 16.5vh;
+    top: 14.5vh;
     left: 18.5vw;
     border-radius: 50px 50px 20px 20px;
     font-family: 'Orbitron', sans-serif;
@@ -113,7 +113,9 @@ transform: rotate(180deg);
 #green {
     z-index: 3;
     background: green;
-    top: 50vh;
+
+    top: 44.5vh;
+
     left: 18.5vw;
     border-radius: 20px 20px 50px 50px;
     font-family: 'Orbitron', sans-serif;
@@ -146,17 +148,18 @@ transform: rotate(180deg);
     background: rgb(236, 24, 236);
 }
 #go {
-    margin-top: -8vh;
-        z-index: 1;
-        background: black;
-        height: 120px;
-        width: 180px;
-        border-radius: 45%;
-        top: 40vh;
-        left: 19.5vw;
-        color: white;
-        font-size: 3em;
-        font-family: 'Orbitron', sans-serif;
+
+    z-index: 1;
+    background: black;
+    height: 100px;
+    width: 140px;
+    border-radius: 45%;
+    top: 29.5vh;
+    left: 21vw;   
+    color: white;
+    font-size: 3em;
+    font-family: 'Orbitron', sans-serif;
+
 }
 #go:focus {
     animation: goGrow .2s;
@@ -261,12 +264,15 @@ https://www.w3schools.com/howto/howto_js_active_element.asp */
 #page1 {
     
     visibility: visible;
-    height: 225px;
+
+    border-radius: 10px;
+
     width: 400px;
     margin-left: 8vw;
     background-color: white;
-    opacity: .2;
+    opacity: .35;
     text-align: center;
+    margin-left: 8vw;
 }
 #page2 {
     visibility: hidden;
@@ -277,15 +283,19 @@ https://www.w3schools.com/howto/howto_js_active_element.asp */
 }
 .button {
     height: 50px;
-    border: solid 1px black;
-    background-color: #99a036;
-    border-radius: 6px;
-    font-family: 'Orbitron', sans-serif;
-    font-size: 18px;
+
+     border: solid 1px black;
+     background-color: #99a036;
+     border-radius: 6px;
+     font-family: 'Orbitron', sans-serif;
+     font-size: 18px;
 }
 .theseButtons{
     padding-top: 55vh;
-    padding-left: 10vw;
+    padding-left: 8vw;
+    padding-bottom: 3vh;
+
+    
    
 }
 a{
@@ -472,12 +482,34 @@ a:hover {
       }
   }
 
+  @media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) { 
+    body {
+        background: url(https://res.cloudinary.com/dh41vh9dx/image/upload/v1545059996/Landscape-Mode.png) no-repeat center center fixed;
+        background-size: contain;
+        background-color: black;
+        background-size: 80%;
+    }
+    .theseButtons {
+        visibility: hidden;
+    }
+    #page1{
+        
+            visibility: hidden
+        }
+    }
+  
+
 
   @media only screen 
   and (min-device-width: 375px) 
   and (max-device-width: 667px) 
   and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: portrait) { 
+
 
 
       body {

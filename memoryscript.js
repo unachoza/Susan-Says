@@ -191,9 +191,9 @@ let bImages = [
     // next Level, goes to page2 and adds 1 to sequence 
     
     document.getElementById('nextLevel').addEventListener('click', function () {
-      i += 1
-      console.log(i)
-      document.body.style.background = `url(${bImages[i]})`
+      // i += 1
+      // console.log(i)
+      // document.body.style.background = `url(${bImages[i]})`
       gamePage.style.visibility = "visible"
       endAlert.style.visibility = "hidden"
       console.log('next level has been reached')
@@ -214,5 +214,12 @@ let bImages = [
     13. lock buttons
      */
   })
-
+  var i = 0
+  document.getElementById('nextLevel').addEventListener('click', () => {
+    console.log("this next level button", i)
+    i += 1
+    document.body.style.background = `url(${bImages[i]})`
+    document.body.style.backgroundSize = "cover"
+    document.body.style.backgroundRepeat = "no-reapeat" 
+  }) 
 

@@ -1,34 +1,21 @@
-  //Intro this project is personal to me because it's a memory game and I love memory games. I played video games as a child, but not currently, so the nostolga is real. 
-  var audioR = document.getElementById("redAudio")
-  var audioB = document.getElementById("blueAudio")
-  var audioG = document.getElementById("greenAudio")
-  var audioP = document.getElementById("purpleAudio")
-
-// var bImages = document.getElementsByClassName('bImages')
-// console.log({bImages})
-
+  //Intro this project is personal to me because it's a memory game with a healthy dose of feminism.
 let bImages = [
-     "file:///Users/ariannaluchachoza/Desktop/ALL%20FOLDERS/Code/Baby%20Developer/Susan-Says/images/susan-sarandon.jpg",
-     "file:///Users/ariannaluchachoza/Desktop/ALL%20FOLDERS/Code/Baby%20Developer/Susan-Says/images/maya-angula.jpg",
-     "file:///Users/ariannaluchachoza/Desktop/ALL%20FOLDERS/Code/Baby%20Developer/Susan-Says/images/frida%20K.jpg",
-     "file:///Users/ariannaluchachoza/Desktop/ALL%20FOLDERS/Code/Baby%20Developer/Susan-Says/images/gloria_st.jpg",
-      "file:///Users/ariannaluchachoza/Desktop/ALL%20FOLDERS/Code/Baby%20Developer/Susan-Says/images/AlexiandraOC.png",
-      "file:///Users/ariannaluchachoza/Desktop/ALL%20FOLDERS/Code/Baby%20Developer/Susan-Says/images/RBG.png",
-      "file:///Users/ariannaluchachoza/Desktop/ALL%20FOLDERS/Code/Baby%20Developer/Susan-Says/images/SerenaW.png",
-      "file:///Users/ariannaluchachoza/Desktop/ALL%20FOLDERS/Code/Baby%20Developer/Susan-Says/images/Indra.png",
-      "file:///Users/ariannaluchachoza/Desktop/ALL%20FOLDERS/Code/Baby%20Developer/Susan-Says/images/anita_hill.png",
-      "file:///Users/ariannaluchachoza/Desktop/ALL%20FOLDERS/Code/Baby%20Developer/Susan-Says/images/Merkle.png",
-      "file:///Users/ariannaluchachoza/Desktop/ALL%20FOLDERS/Code/Baby%20Developer/Susan-Says/images/Madonna.png",
-     "file:///Users/ariannaluchachoza/Desktop/ALL%20FOLDERS/Code/Baby%20Developer/Susan-Says/images/JuleyD.png",
-     "file:///Users/ariannaluchachoza/Desktop/ALL%20FOLDERS/Code/Baby%20Developer/Susan-Says/images/Malala.png",
-     "file:///Users/ariannaluchachoza/Desktop/ALL%20FOLDERS/Code/Baby%20Developer/Susan-Says/images/Michelle_o.png",
-     "file:///Users/ariannaluchachoza/Desktop/ALL%20FOLDERS/Code/Baby%20Developer/Susan-Says/images/SandraO.png",
-     "file:///Users/ariannaluchachoza/Desktop/ALL%20FOLDERS/Code/Baby%20Developer/Susan-Says/images/oprah.png"
-
-
-
-
-
+    "file:///Users/ariannaluchachoza/Desktop/ALL%20FOLDERS/Code/Baby%20Developer/Susan-Says/images/susan-sarandon.jpg",
+    "file:///Users/ariannaluchachoza/Desktop/ALL%20FOLDERS/Code/Baby%20Developer/Susan-Says/images/maya-angula.jpg",
+    "file:///Users/ariannaluchachoza/Desktop/ALL%20FOLDERS/Code/Baby%20Developer/Susan-Says/images/frida%20K.jpg",
+    "file:///Users/ariannaluchachoza/Desktop/ALL%20FOLDERS/Code/Baby%20Developer/Susan-Says/images/gloria_st.jpg",
+    "file:///Users/ariannaluchachoza/Desktop/ALL%20FOLDERS/Code/Baby%20Developer/Susan-Says/images/AlexiandraOC.png",
+    "file:///Users/ariannaluchachoza/Desktop/ALL%20FOLDERS/Code/Baby%20Developer/Susan-Says/images/RBG.png",
+    "file:///Users/ariannaluchachoza/Desktop/ALL%20FOLDERS/Code/Baby%20Developer/Susan-Says/images/SerenaW.png",
+    "file:///Users/ariannaluchachoza/Desktop/ALL%20FOLDERS/Code/Baby%20Developer/Susan-Says/images/Indra.png",
+    "file:///Users/ariannaluchachoza/Desktop/ALL%20FOLDERS/Code/Baby%20Developer/Susan-Says/images/anita_hill.png",
+    "file:///Users/ariannaluchachoza/Desktop/ALL%20FOLDERS/Code/Baby%20Developer/Susan-Says/images/Merkle.png",
+    "file:///Users/ariannaluchachoza/Desktop/ALL%20FOLDERS/Code/Baby%20Developer/Susan-Says/images/Madonna.png",
+    "file:///Users/ariannaluchachoza/Desktop/ALL%20FOLDERS/Code/Baby%20Developer/Susan-Says/images/JuleyD.png",
+    "file:///Users/ariannaluchachoza/Desktop/ALL%20FOLDERS/Code/Baby%20Developer/Susan-Says/images/Malala.png",
+    "file:///Users/ariannaluchachoza/Desktop/ALL%20FOLDERS/Code/Baby%20Developer/Susan-Says/images/Michelle_o.png",
+    "file:///Users/ariannaluchachoza/Desktop/ALL%20FOLDERS/Code/Baby%20Developer/Susan-Says/images/SandraO.png",
+    "file:///Users/ariannaluchachoza/Desktop/ALL%20FOLDERS/Code/Baby%20Developer/Susan-Says/images/oprah.png"
  ]
 
   let colorNum = [0]
@@ -56,14 +43,13 @@ let bImages = [
     endAlert.style.display = 'none';
     score = 0
     userScore.innerHTML = score
-    document.getElementById('nextLevel').disabled = false
     colorNum = 0
   })
+
   playButton.addEventListener('click', function () {
-    console.log('I was clicked')
+    console.log('playButton was clicked')
     instructionsPage.style.visibility = 'hidden'
     gamePage.style.visibility = 'visible'
-    //body.style.opacity = 10;
   })
 
   //making buttons objects
@@ -92,7 +78,6 @@ let bImages = [
       for (let i = 0; i < buttons.length - 1; i++) {
         buttons[i]['dom'].addEventListener('click', function () {
           user.push(buttons[i]["value"])
-          console.log(user)
           winOrLoseAfter(colorNum, user)
         })
       }
@@ -102,14 +87,13 @@ let bImages = [
     element = Math.floor(Math.random() * 4)
     colorNum.push(element)
 
-    console.log(colorNum)
+    console.log("Susan array" , colorNum)
 
     function susanBlink(colorNum) {
       for (let i = 0; i < colorNum.length; i++) {
         setTimeout(function () {
           whichColorBlinks(colorNum[i]);
         }, i * 500);
-
       }
     }
     susanBlink(colorNum)
@@ -118,41 +102,35 @@ let bImages = [
       switch (colorNum) {
         case 0:
           document.getElementById('red').classList.add('activeR')
-          // playRedAudio()
           setTimeout(function () {
             document.getElementById('red').classList.remove('activeR')
-          }, 300)
+          }, 400)
           break;
         case 1:
           document.getElementById('blue').classList.add('activeB')
-          // playBlueAudio()
           setTimeout(function () {
             document.getElementById('blue').classList.remove('activeB')
-          }, 300)
+          }, 400)
           break;
         case 2:
           document.getElementById('green').classList.add('activeG')
-          // playGreenAudio()
           setTimeout(function () {
             document.getElementById('green').classList.remove('activeG')
-          }, 300)
+          }, 400)
           break;
         case 3:
-
           document.getElementById('purple').classList.add('activeP')
-          // playPurpleAudio()
           setTimeout(function () {
             document.getElementById('purple').classList.remove('activeP')
-          }, 300)
+          }, 400)
           break;
       }
     }
 
-
-
     function winOrLoseAfter(colorNum, user) {
       let loser = false
       if (user.length === colorNum.length) {
+        console.log("user array", user)
         console.log('time to check winner')
         for (let i = 0; i < colorNum.length; i++) {
           if (colorNum[i] !== user[i]) {
@@ -167,7 +145,7 @@ let bImages = [
             //endAlert.style.display = 'none';
             endAlert.style.display = 'inline';
             document.getElementById('nextLevel').disabled = true
-            document.getElementById('playGame').disabled = false
+            //document.getElementById('playGame').disabled = false
             break
           }
         }
@@ -184,42 +162,37 @@ let bImages = [
           susanBlink(colorNum)
         }
       }
-
     }
-    var i =0
     // images are being called, syntax is correct, having trouble looping 
     // next Level, goes to page2 and adds 1 to sequence 
+
     
     document.getElementById('nextLevel').addEventListener('click', function () {
       // i += 1
       // console.log(i)
       // document.body.style.background = `url(${bImages[i]})`
+
       gamePage.style.visibility = "visible"
       endAlert.style.visibility = "hidden"
       console.log('next level has been reached')
-        user = []
-        // console.log("the score is", score,"the number of colors is", colorNum)
     })
-
-
-
-    /* High Score Leader Board*/
-
-    /* TO DO LIST*
-    // 4. Alerts display "win next levelt"; 'fail display score"
-    // 6. Build High Score Board
-    8. Transitions for Win/lose Alerts
-    // 10. high score board logic 
-    11. Add background img of impressive women speaking, change img every level
-    13. lock buttons
+    /* High Score Leader Board
+    Alerts display "win next levelt"; 'fail display score"
+    Build High Score Board
+    Transitions for Win/lose Alerts
+    High score board logic 
+    Add background img of impressive women speaking, change img every level
      */
   })
+
   var i = 0
+
   document.getElementById('nextLevel').addEventListener('click', () => {
     console.log("this next level button", i)
     i += 1
     document.body.style.background = `url(${bImages[i]})`
     document.body.style.backgroundSize = "cover"
+
     document.body.style.backgroundRepeat = "no-reapeat" 
   }) 
 

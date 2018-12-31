@@ -1,21 +1,27 @@
   //Intro this project is personal to me because it's a memory game with a healthy dose of feminism.
 let bImages = [
-    "file:///Users/ariannaluchachoza/Desktop/ALL%20FOLDERS/Code/Baby%20Developer/Susan-Says/images/susan-sarandon.jpg",
-    "file:///Users/ariannaluchachoza/Desktop/ALL%20FOLDERS/Code/Baby%20Developer/Susan-Says/images/maya-angula.jpg",
-    "file:///Users/ariannaluchachoza/Desktop/ALL%20FOLDERS/Code/Baby%20Developer/Susan-Says/images/frida%20K.jpg",
-    "file:///Users/ariannaluchachoza/Desktop/ALL%20FOLDERS/Code/Baby%20Developer/Susan-Says/images/gloria_st.jpg",
-    "file:///Users/ariannaluchachoza/Desktop/ALL%20FOLDERS/Code/Baby%20Developer/Susan-Says/images/AlexiandraOC.png",
-    "file:///Users/ariannaluchachoza/Desktop/ALL%20FOLDERS/Code/Baby%20Developer/Susan-Says/images/RBG.png",
-    "file:///Users/ariannaluchachoza/Desktop/ALL%20FOLDERS/Code/Baby%20Developer/Susan-Says/images/SerenaW.png",
-    "file:///Users/ariannaluchachoza/Desktop/ALL%20FOLDERS/Code/Baby%20Developer/Susan-Says/images/Indra.png",
-    "file:///Users/ariannaluchachoza/Desktop/ALL%20FOLDERS/Code/Baby%20Developer/Susan-Says/images/anita_hill.png",
-    "file:///Users/ariannaluchachoza/Desktop/ALL%20FOLDERS/Code/Baby%20Developer/Susan-Says/images/Merkle.png",
-    "file:///Users/ariannaluchachoza/Desktop/ALL%20FOLDERS/Code/Baby%20Developer/Susan-Says/images/Madonna.png",
-    "file:///Users/ariannaluchachoza/Desktop/ALL%20FOLDERS/Code/Baby%20Developer/Susan-Says/images/JuleyD.png",
-    "file:///Users/ariannaluchachoza/Desktop/ALL%20FOLDERS/Code/Baby%20Developer/Susan-Says/images/Malala.png",
-    "file:///Users/ariannaluchachoza/Desktop/ALL%20FOLDERS/Code/Baby%20Developer/Susan-Says/images/Michelle_o.png",
-    "file:///Users/ariannaluchachoza/Desktop/ALL%20FOLDERS/Code/Baby%20Developer/Susan-Says/images/SandraO.png",
-    "file:///Users/ariannaluchachoza/Desktop/ALL%20FOLDERS/Code/Baby%20Developer/Susan-Says/images/oprah.png"
+    "https://res.cloudinary.com/dh41vh9dx/image/upload/v1546220914/susan-sarandon.jpg",
+    "https://res.cloudinary.com/dh41vh9dx/image/upload/v1546220905/maya-angula.jpg",
+    "https://res.cloudinary.com/dh41vh9dx/image/upload/v1538344728/frida_K.jpg",
+    "https://res.cloudinary.com/dh41vh9dx/image/upload/v1546223655/BettyFriedan.jpg",
+    "https://res.cloudinary.com/dh41vh9dx/image/upload/v1538347728/gloria_st.jpg",
+    "https://res.cloudinary.com/dh41vh9dx/image/upload/v1546220902/AlexiandraOC.png",
+    "https://res.cloudinary.com/dh41vh9dx/image/upload/v1546220913/RBG.png",
+    "https://res.cloudinary.com/dh41vh9dx/image/upload/v1546223656/simon_de_beauvoir.jpg",
+    "https://res.cloudinary.com/dh41vh9dx/image/upload/v1546220916/SerenaW.png",
+    "https://res.cloudinary.com/dh41vh9dx/image/upload/v1546220903/Indra.png",
+    "https://res.cloudinary.com/dh41vh9dx/image/upload/v1546220903/anita_hill.png",
+    "https://res.cloudinary.com/dh41vh9dx/image/upload/v1546220900/DrFord.png",
+    "https://res.cloudinary.com/dh41vh9dx/image/upload/v1546220905/Merkle.png",
+    "https://res.cloudinary.com/dh41vh9dx/image/upload/v1546220905/Madonna.png",
+    "https://res.cloudinary.com/dh41vh9dx/image/upload/v1546220901/JuleyD.png",
+    "https://res.cloudinary.com/dh41vh9dx/image/upload/v1546220907/Malala.png",
+    "https://res.cloudinary.com/dh41vh9dx/image/upload/v1546220906/Michelle_o.png",
+    "https://res.cloudinary.com/dh41vh9dx/image/upload/v1546220909/SandraO.png",
+    "https://res.cloudinary.com/dh41vh9dx/image/upload/v1546223657/agnes_varda.jpg",
+    "https://res.cloudinary.com/dh41vh9dx/image/upload/v1546220915/Sheryl_Sanberg.png",
+    "https://res.cloudinary.com/dh41vh9dx/image/upload/v1546220900/Hillary_Clinton.png",
+    "https://res.cloudinary.com/dh41vh9dx/image/upload/v1546220913/oprah.png"
  ]
 
   let colorNum = [0]
@@ -184,7 +190,7 @@ let bImages = [
     Add background img of impressive women speaking, change img every level
      */
   })
-  var i = 3
+  var i = 0
   document.getElementById('nextLevel').addEventListener('click', () => {
     console.log("this next level button", i)
     i += 1

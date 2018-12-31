@@ -1,7 +1,3 @@
-img, embed, object, video {
-    max-width: 100%;
-}
-
 html {
     display: block;
 }
@@ -11,9 +7,10 @@ body{
     background: url("https://res.cloudinary.com/dh41vh9dx/image/upload/v1538350067/susan-sarandon.jpg") no-repeat center center fixed;
     background-color: #cccccc;
     background-size: cover;
-    background-repeat: no-repeat;
-    
+    /* background-repeat: no-repeat; */
     /* margin-left: 200px; */
+    
+        
 }
 
 header {
@@ -22,12 +19,15 @@ header {
 }
 .page {
     position: absolute;
+
 }
 h1{
+     
         font-family: 'Merriweather', serif;
         margin-top: 2vh;
         margin-left: 17vw;
         margin-bottom: 2vh;
+    
 }
 h4 {
     font-family: 'Charmonman', cursive;
@@ -44,7 +44,9 @@ h5 {
     padding: 0;
 }
 #display-score {
+    
 }
+
 /* .container {
     display: flex;
     justify-content: center;
@@ -55,10 +57,6 @@ p {
     font-family: 'Merriweather', serif;
 
 }
-.susan-container {
-    height: 350px;
-    width: 500px;
-}
 .top {
 transform: rotate(180deg);
 }
@@ -66,7 +64,7 @@ transform: rotate(180deg);
 
 }
 .color {
-    /* position: fixed; */
+    position: fixed;
     justify-items: center;
     height: 100px;
     width: 200px;
@@ -78,7 +76,7 @@ transform: rotate(180deg);
     background: blue;
     position: fixed;
     z-index: 1;
-    top: 16.5vh;
+    top: 14.5vh;
     left: 18.5vw;
     border-radius: 50px 50px 20px 20px;
     font-family: 'Orbitron', sans-serif;
@@ -113,7 +111,7 @@ transform: rotate(180deg);
 #green {
     z-index: 3;
     background: green;
-    top: 50vh;
+    top: 44.5vh;
     left: 18.5vw;
     border-radius: 20px 20px 50px 50px;
     font-family: 'Orbitron', sans-serif;
@@ -146,17 +144,16 @@ transform: rotate(180deg);
     background: rgb(236, 24, 236);
 }
 #go {
-    margin-top: -8vh;
-        z-index: 1;
-        background: black;
-        height: 120px;
-        width: 180px;
-        border-radius: 45%;
-        top: 40vh;
-        left: 19.5vw;
-        color: white;
-        font-size: 3em;
-        font-family: 'Orbitron', sans-serif;
+    z-index: 1;
+    background: black;
+    height: 100px;
+    width: 140px;
+    border-radius: 45%;
+    top: 29.5vh;
+    left: 21vw;   
+    color: white;
+    font-size: 3em;
+    font-family: 'Orbitron', sans-serif;
 }
 #go:focus {
     animation: goGrow .2s;
@@ -261,12 +258,12 @@ https://www.w3schools.com/howto/howto_js_active_element.asp */
 #page1 {
     
     visibility: visible;
-    height: 225px;
+    border-radius: 10px;
     width: 400px;
-    margin-left: 8vw;
     background-color: white;
-    opacity: .2;
+    opacity: .35;
     text-align: center;
+    margin-left: 8vw;
 }
 #page2 {
     visibility: hidden;
@@ -277,15 +274,16 @@ https://www.w3schools.com/howto/howto_js_active_element.asp */
 }
 .button {
     height: 50px;
-    border: solid 1px black;
-    background-color: #99a036;
-    border-radius: 6px;
-    font-family: 'Orbitron', sans-serif;
-    font-size: 18px;
+     border: solid 1px black;
+     background-color: #99a036;
+     border-radius: 6px;
+     font-family: 'Orbitron', sans-serif;
+     font-size: 18px;
 }
 .theseButtons{
     padding-top: 55vh;
-    padding-left: 10vw;
+    padding-left: 8vw;
+    padding-bottom: 3vh;
    
 }
 a{
@@ -324,6 +322,7 @@ a:hover {
         z-index: 1;
         top: 1vh;
         left: 100px;
+        transform: rotate(0deg);
         border-radius: 50px 50px 20px 20px;
         font-family: 'Orbitron', sans-serif;
         font-size: 2em;
@@ -336,18 +335,18 @@ a:hover {
         left: 100px;
         border-radius: 20px 20px 50px 50px;
         font-family: 'Orbitron', sans-serif;
+        transform: rotate(0deg);
         font-size: 2em;
         color: rgb(2, 83, 2);
     }
     #go {
-        margin-top: -8vh;
         z-index: 1;
         background: black;
-        height: 120px;
-        width: 180px;
+        height: 100px;
+        width: 140px;
         border-radius: 45%;
-        top: 40vh;
-        left: 19.5vw;
+        top: 100px;
+        left: 13.5vw;
         color: white;
         font-size: 3em;
         font-family: 'Orbitron', sans-serif;
@@ -416,6 +415,7 @@ a:hover {
           z-index: 1;
           top: 1vh;
           left: 13vw;
+          transform: rotate(0deg);
           border-radius: 50px 50px 20px 20px;
           font-family: 'Orbitron', sans-serif;
           font-size: 2em;
@@ -426,6 +426,7 @@ a:hover {
           background: green;
           top: 200px;
           left: 13VW;
+          transform: rotate(0deg);
           border-radius: 20px 20px 50px 50px;
           font-family: 'Orbitron', sans-serif;
           font-size: 2em;
@@ -472,22 +473,32 @@ a:hover {
       }
   }
 
-
   @media only screen 
   and (min-device-width: 375px) 
   and (max-device-width: 667px) 
   and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: portrait) { 
-
-
-      body {
-          background: url(https://res.cloudinary.com/dh41vh9dx/image/upload/v1545059996/Landscape-Mode.png) no-repeat center center fixed;
-          background-size: contain;
-          background-color: black;
-      }
-
-
+    body {
+        background: url(https://res.cloudinary.com/dh41vh9dx/image/upload/v1545059996/Landscape-Mode.png) no-repeat center center fixed;
+        background-size: contain;
+        background-color: black;
+        background-size: 80%;
     }
+    .theseButtons {
+        visibility: hidden;
+    }
+    #page1{
+        
+            visibility: hidden
+        }
+    }
+  
+
+    
+
+
+
+
 
 
 /* }

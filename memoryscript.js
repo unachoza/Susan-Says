@@ -150,10 +150,7 @@ let bImages = [
             gamePage.style.visibility = "hidden"
             page3.style.visibility = 'visible'
             theseButtons.style.margintop = "28vh"
-            // endAlert.innerHTML = "Your Score is " + score
-            userScore.innerHTML = "Your Score is " + score;
-            header.style.visibility = "visible"
-            // endAlert.style.display = 'inline';
+            userScore.innerHTML = "Susan Says " + "Your Score is " + score;
             scorePage.style.visibility = "visible"
             
             break
@@ -164,8 +161,6 @@ let bImages = [
           score += colorNum.length * 10
           console.log("the score is", score)
           gamePage.style.visibility = "hidden"
-          // endAlert.innerHTML = "Your Score is " + score
-          userScore.innerHTML = "Your Score is " + score;
           susanBlink(colorNum)
           nextLevel.style.visibility = "visible"
         }

@@ -154,6 +154,7 @@ transform: rotate(180deg);
     color: white;
     font-size: 3em;
     font-family: 'Orbitron', sans-serif;
+
 }
 #go:focus {
     animation: goGrow .2s;
@@ -284,6 +285,8 @@ https://www.w3schools.com/howto/howto_js_active_element.asp */
     padding-top: 55vh;
     padding-left: 8vw;
     padding-bottom: 3vh;
+
+    
    
 }
 a{
@@ -494,9 +497,37 @@ a:hover {
     }
   
 
+
+  @media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) { 
+    body {
+        background: url(https://res.cloudinary.com/dh41vh9dx/image/upload/v1545059996/Landscape-Mode.png) no-repeat center center fixed;
+        background-size: contain;
+        background-color: black;
+        background-size: 80%;
+    }
+    .theseButtons {
+        visibility: hidden;
+    }
+    #page1{
+        
+            visibility: hidden
+        }
+    }
+  
+
     
 
 
+
+      body {
+          background: url(https://res.cloudinary.com/dh41vh9dx/image/upload/v1545059996/Landscape-Mode.png) no-repeat center center fixed;
+          background-size: contain;
+          background-color: black;
+      }
 
 
 

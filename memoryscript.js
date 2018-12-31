@@ -172,13 +172,7 @@ let bImages = [
       console.log('next level has been reached')
       user = []
     })
-    /* High Score Leader Board
-    Alerts display "win next levelt"; 'fail display score"
-    Build High Score Board
-    Transitions for Win/lose Alerts
-    High score board logic 
-    Add background img of impressive women speaking, change img every level
-     */
+ 
   })
 
   var i = 0
@@ -189,3 +183,12 @@ let bImages = [
     document.body.style.backgroundRepeat = "no-reapeat" 
   }) 
 
+/*   
+these changes
+High Score Leader Board
+    Alerts display "win next levelt"; 'fail display score"
+    Build High Score Board
+    Transitions for Win/lose Alerts
+    High score board logic 
+    Add background img of impressive women speaking, change img every level
+     */ 

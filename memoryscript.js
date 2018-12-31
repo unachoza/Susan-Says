@@ -44,14 +44,7 @@ let bImages = [
   const nextLevel = document.getElementById('nextLevel')
   const header =  document.querySelector('h1')
 
-  // restart.addEventListener('click', function () {
-  //   instructionsPage.style.visibility = 'visible';
-  //   gamePage.style.visibility = 'hidden';
-  //   endAlert.style.display = 'none';
-  //   score = 0
-  //   userScore.innerHTML = score
-  //   colorNum = 0
-  // })
+  
 
   playButton.addEventListener('click', function () {
     console.log('playButton was clicked')

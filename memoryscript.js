@@ -35,27 +35,32 @@ let bImages = [
   const purple = document.querySelector('#purple')
 
   const userScore = document.querySelector('#display-score')
-  const endAlert = document.querySelector('.alert')
   const gamePage = document.querySelector('#page2')
   const theseButtons = document.querySelector('.theseButtons')
   const instructionsPage = document.querySelector('#page1')
   const playButton = document.querySelector('#playbutton')
   const scorePage = document.querySelector('#page3')
   const restart = document.querySelector('#restart')
+  const nextLevel = document.getElementById('nextLevel')
+  const header =  document.querySelector('h1')
 
-  restart.addEventListener('click', function () {
-    instructionsPage.style.visibility = 'visible';
-    gamePage.style.visibility = 'hidden';
-    endAlert.style.display = 'none';
-    score = 0
-    userScore.innerHTML = score
-    colorNum = 0
-  })
+  // restart.addEventListener('click', function () {
+  //   instructionsPage.style.visibility = 'visible';
+  //   gamePage.style.visibility = 'hidden';
+  //   endAlert.style.display = 'none';
+  //   score = 0
+  //   userScore.innerHTML = score
+  //   colorNum = 0
+  // })
 
   playButton.addEventListener('click', function () {
     console.log('playButton was clicked')
     instructionsPage.style.visibility = 'hidden'
     gamePage.style.visibility = 'visible'
+    playButton.style.visibility = "hidden"
+    nextLevel.style.visibility = "hidden"
+    header.style.visibility = "hidden"
+
   })
 
   //making buttons objects
@@ -143,15 +148,14 @@ let bImages = [
             console.log('incorrect')
             loser = true
             gamePage.style.visibility = "hidden"
-            scorePage.style.visibility = 'visible'
+            page3.style.visibility = 'visible'
             theseButtons.style.margintop = "28vh"
-            endAlert.innerHTML = "Your Score is " + score
-            userScore.innerHTML = score;
-
-            //endAlert.style.display = 'none';
-            endAlert.style.display = 'inline';
-            document.getElementById('nextLevel').disabled = true
-            //document.getElementById('playGame').disabled = false
+            // endAlert.innerHTML = "Your Score is " + score
+            userScore.innerHTML = "Your Score is " + score;
+            header.style.visibility = "visible"
+            // endAlert.style.display = 'inline';
+            scorePage.style.visibility = "visible"
+            
             break
           }
         }
@@ -160,27 +164,18 @@ let bImages = [
           score += colorNum.length * 10
           console.log("the score is", score)
           gamePage.style.visibility = "hidden"
-          endAlert.innerHTML = "Your Score is " + score
-          userScore.innerHTML = score;
-
-          //endAlert.style.display = 'inline';
-          // endAlert.style.color = 'green';
+          // endAlert.innerHTML = "Your Score is " + score
+          userScore.innerHTML = "Your Score is " + score;
           susanBlink(colorNum)
+          nextLevel.style.visibility = "visible"
         }
       }
     }
-    // images are being called, syntax is correct, having trouble looping 
-    // next Level, goes to page2 and adds 1 to sequence 
-
-    
     document.getElementById('nextLevel').addEventListener('click', function () {
-      // i += 1
-      // console.log(i)
-      // document.body.style.background = `url(${bImages[i]})`
-
       gamePage.style.visibility = "visible"
-      endAlert.style.visibility = "hidden"
+      nextLevel.style.visibility = "hidden"
       console.log('next level has been reached')
+      user = []
     })
     /* High Score Leader Board
     Alerts display "win next levelt"; 'fail display score"
@@ -192,13 +187,10 @@ let bImages = [
   })
 
   var i = 0
-
   document.getElementById('nextLevel').addEventListener('click', () => {
-    console.log("this next level button", i)
     i += 1
     document.body.style.background = `url(${bImages[i]})`
     document.body.style.backgroundSize = "cover"
-
     document.body.style.backgroundRepeat = "no-reapeat" 
   }) 
 

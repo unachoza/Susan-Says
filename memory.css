@@ -12,6 +12,9 @@ body{
     
         
 }
+#nextLevel{
+    visibility: hidden;
+}
 
 header {
     text-align: center;
@@ -19,6 +22,7 @@ header {
 }
 .page {
     position: absolute;
+    margin-top: 5vh;
 
 }
 h1{
@@ -32,20 +36,18 @@ h1{
 h4 {
     font-family: 'Charmonman', cursive;
     margin-top: -1vh;
-    margin-left: 17vw;
+    margin-left: 2vw;
 }
 h3 {
     font-family: 'Merriweather', serif;
 }
 h5 {
     font-family: 'Orbitron', sans-serif;
-    font-size: 20px;
+    font-size: 25px;
     margin-top: 500px;
-    padding: 0;
+    border-radius: 10px;
 }
-#display-score {
-    
-}
+
 
 /* .container {
     display: flex;
@@ -78,6 +80,7 @@ transform: rotate(180deg);
     z-index: 1;
     top: 14.5vh;
     left: 18.5vw;
+    transform: rotate(0deg);
     border-radius: 50px 50px 20px 20px;
     font-family: 'Orbitron', sans-serif;
     font-size: 2em;
@@ -93,7 +96,7 @@ transform: rotate(180deg);
 #red {
     z-index: 2;
     background: red;
-    
+    top: 20vh;
     left: 26.5vw;
     transform: rotate(-90deg) translate(0, -100%);
     transform-origin: 100% 0;
@@ -113,6 +116,7 @@ transform: rotate(180deg);
     background: green;
     top: 44.5vh;
     left: 18.5vw;
+    transform: rotate(0deg);
     border-radius: 20px 20px 50px 50px;
     font-family: 'Orbitron', sans-serif;
     font-size: 2em;
@@ -129,6 +133,7 @@ transform: rotate(180deg);
     z-index: 4;
     background: purple;
     left: 3vw;
+    top: 20vh;
     transform: rotate(-90deg) translate(0, -100%);
     transform-origin: 100% 0;
     border-radius: 50px 50px 20px 20px;
@@ -235,7 +240,7 @@ https://www.w3schools.com/howto/howto_js_active_element.asp */
       margin-bottom: 5px;
   }
   #display-score {
-      margin-top: 300px;
+      margin-top: 120px;
   }
 
   .alert {
@@ -272,6 +277,8 @@ https://www.w3schools.com/howto/howto_js_active_element.asp */
 }
 #page3 {
     visibility: hidden;
+    top: 20vh;
+    left: 17vw;
 }
 .button {
     height: 50px;
@@ -285,6 +292,7 @@ https://www.w3schools.com/howto/howto_js_active_element.asp */
     padding-top: 55vh;
     padding-left: 8vw;
     padding-bottom: 3vh;
+    z-index: 1;
 
     
    
@@ -476,25 +484,7 @@ a:hover {
       }
   }
 
-  @media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 667px) 
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (orientation: portrait) { 
-    body {
-        background: url(https://res.cloudinary.com/dh41vh9dx/image/upload/v1545059996/Landscape-Mode.png) no-repeat center center fixed;
-        background-size: contain;
-        background-color: black;
-        background-size: 80%;
-    }
-    .theseButtons {
-        visibility: hidden;
-    }
-    #page1{
-        
-            visibility: hidden
-        }
-    }
+
   
 
 
@@ -522,12 +512,6 @@ a:hover {
     
 
 
-
-      body {
-          background: url(https://res.cloudinary.com/dh41vh9dx/image/upload/v1545059996/Landscape-Mode.png) no-repeat center center fixed;
-          background-size: contain;
-          background-color: black;
-      }
 
 
 

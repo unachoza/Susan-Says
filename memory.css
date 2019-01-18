@@ -216,6 +216,23 @@ transform: rotate(180deg);
     to {background-color: rgb(211, 30, 211);}
 }
 
+input {
+    height: 39px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 18px;
+    background-color: rgba(128, 128, 128, 0.9);
+    text-align: center;
+}
+::placeholder{
+    color: black
+
+}
+#user-name-input{
+    margin-left: 100px
+}
+.placeholder{
+    color: black;
+}
 /* How to make a class active 
 https://www.w3schools.com/howto/howto_js_active_element.asp */
 

@@ -39,6 +39,7 @@ let bImages = [
   const theseButtons = document.querySelector('.theseButtons')
   const instructionsPage = document.querySelector('#page1')
   const playButton = document.querySelector('#playbutton')
+  const userInput = document.querySelector('#user-name')
   const scorePage = document.querySelector('#page3')
   const restart = document.querySelector('#restart')
   const nextLevel = document.getElementById('nextLevel')
@@ -51,6 +52,7 @@ let bImages = [
     instructionsPage.style.visibility = 'hidden'
     gamePage.style.visibility = 'visible'
     playButton.style.visibility = "hidden"
+    userInput.style.visibility = 'hidden'
     nextLevel.style.visibility = "hidden"
     header.style.visibility = "hidden"
 
@@ -143,9 +145,9 @@ let bImages = [
             gamePage.style.visibility = "hidden"
             page3.style.visibility = 'visible'
             theseButtons.style.margintop = "28vh"
-            userScore.innerHTML = "Susan Says " + "Your Score is " + score;
+            userScore.innerHTML = "Susan Says " + userName + ", Your Score is " + score;
             scorePage.style.visibility = "visible"
-            
+            isStorage && localStorage.setItem('fap-scores', elements.scores)
             break
           }
         }
@@ -176,12 +178,34 @@ let bImages = [
     document.body.style.backgroundRepeat = "no-reapeat" 
   }) 
 
+  function reloading (){
+    console.log('refresh!')
+    location.reload();
+
+}
+
 /*   
-these changes
 High Score Leader Board
-    Alerts display "win next levelt"; 'fail display score"
     Build High Score Board
-    Transitions for Win/lose Alerts
     High score board logic 
-    Add background img of impressive women speaking, change img every level
      */ 
+
+var userName = document.getElementById("user-name").value
+console.log(userName)
+
+    function handleSubmit(){
+        console.log("submitted")
+        console.log("the value is " + userName)
+        var input_value = document.getElementById('question').value;
+        var userName = document.getElementById("user-name").value
+        console.log(input_value)
+    document.getElementById('displayQuestion').innerHTML = input_value;
+
+
+    }
+
+const isStorage = 'undefinted' !== typeof localStorage;
+
+if( isStorage && localStorage.getItem('fap-scores')){
+  elements.scores = localStorage.getItem('fap-scores').split(',')
+}

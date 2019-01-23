@@ -147,7 +147,8 @@ let bImages = [
             theseButtons.style.margintop = "28vh"
             userScore.innerHTML = "Susan Says " + userName + ", Your Score is " + score;
             scorePage.style.visibility = "visible"
-            isStorage && localStorage.setItem('fap-scores', elements.scores)
+            console.log( text + "'s score is " + score )
+            // isStorage && localStorage.setItem('fap-scores', elements.scores)
             break
           }
         }
@@ -158,6 +159,7 @@ let bImages = [
           gamePage.style.visibility = "hidden"
           susanBlink(colorNum)
           nextLevel.style.visibility = "visible"
+          
         }
       }
     }
@@ -204,8 +206,22 @@ console.log(userName)
 
     }
 
-const isStorage = 'undefinted' !== typeof localStorage;
+// const isStorage = 'undefinted' !== typeof localStorage;
 
-if( isStorage && localStorage.getItem('fap-scores')){
-  elements.scores = localStorage.getItem('fap-scores').split(',')
+// if( isStorage && localStorage.getItem('fap-scores')){
+//   elements.scores = localStorage.getItem('fap-scores').split(',')
+// }
+
+//High Score Board
+var text = "";
+function myFunction() {
+  var x = document.getElementById("user-name");
+  
+  var i;
+  for (i = 0; i < x.length ;i++) {
+    text += x.elements[i].value
+  }
+  // document.getElementById("fill").innerHTML = text;
+  console.log(text)
+  return text 
 }

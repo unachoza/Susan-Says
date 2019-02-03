@@ -5,17 +5,17 @@ let bImages = [
     "https://res.cloudinary.com/dh41vh9dx/image/upload/v1538344728/frida_K.jpg",
     "https://res.cloudinary.com/dh41vh9dx/image/upload/v1546223655/BettyFriedan.jpg",
     "https://res.cloudinary.com/dh41vh9dx/image/upload/v1538347728/gloria_st.jpg",
-    "https://res.cloudinary.com/dh41vh9dx/image/upload/v1546220902/AlexiandraOC.png",
+    "https://res.cloudinary.com/dh41vh9dx/image/upload/c_scale,w_553/v1546220902/AlexiandraOC.png",
     "https://res.cloudinary.com/dh41vh9dx/image/upload/v1546220913/RBG.png",
     "https://res.cloudinary.com/dh41vh9dx/image/upload/v1546223656/simon_de_beauvoir.jpg",
     "https://res.cloudinary.com/dh41vh9dx/image/upload/v1546220916/SerenaW.png",
-    "https://res.cloudinary.com/dh41vh9dx/image/upload/v1546220903/Indra.png",
     "https://res.cloudinary.com/dh41vh9dx/image/upload/v1546220903/anita_hill.png",
     "https://res.cloudinary.com/dh41vh9dx/image/upload/v1546220900/DrFord.png",
     "https://res.cloudinary.com/dh41vh9dx/image/upload/v1546220905/Merkle.png",
     "https://res.cloudinary.com/dh41vh9dx/image/upload/v1546220905/Madonna.png",
     "https://res.cloudinary.com/dh41vh9dx/image/upload/v1546220901/JuleyD.png",
     "https://res.cloudinary.com/dh41vh9dx/image/upload/v1546220907/Malala.png",
+    "https://res.cloudinary.com/dh41vh9dx/image/upload/v1546220903/Indra.png",
     "https://res.cloudinary.com/dh41vh9dx/image/upload/v1546220906/Michelle_o.png",
     "https://res.cloudinary.com/dh41vh9dx/image/upload/v1546220909/SandraO.png",
     "https://res.cloudinary.com/dh41vh9dx/image/upload/v1546223657/agnes_varda.jpg",
@@ -51,9 +51,9 @@ let bImages = [
     console.log('playButton was clicked')
     instructionsPage.style.visibility = 'hidden'
     gamePage.style.visibility = 'visible'
-    playButton.style.visibility = "hidden"
+    playButton.style.display = "none"
     userInput.style.visibility = 'hidden'
-    nextLevel.style.visibility = "hidden"
+    nextLevel.style.display = "none"
     header.style.visibility = "hidden"
 
   })
@@ -132,6 +132,8 @@ let bImages = [
           break;
       }
     }
+    
+   
 
     function winOrLoseAfter(colorNum, user) {
       let loser = false
@@ -148,6 +150,16 @@ let bImages = [
             userScore.innerHTML = "Susan Says " + userName + ", Your Score is " + score;
             scorePage.style.visibility = "visible"
             console.log( text + "'s score is " + score )
+            localStorage.setItem( 'highScore', 100)
+            restart.style.visibility = "visible"
+            
+            if(score > parseInt(localStorage.getItem('highscore'))){
+              let newHighScore = score
+              console.log(newHighScore)
+              localStorage.setItem(newHighScore, score )
+            } 
+            
+            // localStorage.setItem('score', score)
             // isStorage && localStorage.setItem('fap-scores', elements.scores)
             break
           }
@@ -158,7 +170,7 @@ let bImages = [
           console.log("the score is", score)
           gamePage.style.visibility = "hidden"
           susanBlink(colorNum)
-          nextLevel.style.visibility = "visible"
+          nextLevel.style.display = "block"
           
         }
       }
@@ -213,10 +225,10 @@ console.log(userName)
 // }
 
 //High Score Board
-var text = "";
+
 function myFunction() {
   var x = document.getElementById("user-name");
-  
+  var text = "";
   var i;
   for (i = 0; i < x.length ;i++) {
     text += x.elements[i].value

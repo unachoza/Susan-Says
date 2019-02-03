@@ -12,8 +12,14 @@ body{
     
         
 }
+ul{
+    text-decoration: none
+}
+li{
+    list-style-type: none;
+}
 #nextLevel{
-    visibility: hidden;
+    display: none;
 }
 
 header {
@@ -261,7 +267,9 @@ https://www.w3schools.com/howto/howto_js_active_element.asp */
       line-height: 1.6;
       width: 28vw;
   }
-
+#restart{
+    /* visibility: hidden; */
+}
   .alert {
     margin-top: 800px;
     border: whitesmoke solid 2px;
@@ -425,6 +433,7 @@ a:hover {
         }
         #playbutton {
             margin-left: 16vw;
+             
 
         }
     

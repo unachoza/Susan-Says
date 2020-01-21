@@ -7,6 +7,7 @@ body{
     background: url("https://res.cloudinary.com/dh41vh9dx/image/upload/v1538350067/susan-sarandon.jpg") no-repeat center center fixed;
     background-color: #cccccc;
     background-size: cover;
+    font-family: 'Merriweather', serif;
     /* background-repeat: no-repeat; */
     /* margin-left: 200px; */
     
@@ -19,7 +20,7 @@ li{
     list-style-type: none;
 }
 #nextLevel{
-    display: none;
+    visibility: hidden;
 }
 
 header {
@@ -33,7 +34,7 @@ header {
 }
 h1{
      
-        font-family: 'Merriweather', serif;
+      font-size: 35px;
         margin-top: 2vh;
         margin-left: 17vw;
         margin-bottom: 2vh;
@@ -44,9 +45,7 @@ h4 {
     margin-top: -1vh;
     margin-left: 2vw;
 }
-h3 {
-    font-family: 'Merriweather', serif;
-}
+
 h5 {
     font-family: 'Orbitron', sans-serif;
     font-size: 25px;
@@ -61,10 +60,7 @@ h5 {
     align-items: center;
     position: absolute;
     } */
-p {
-    font-family: 'Merriweather', serif;
 
-}
 .top {
 transform: rotate(180deg);
 }
@@ -417,7 +413,7 @@ a:hover {
     h1 {
        
         
-            font-family: 'Merriweather', serif;
+          
             margin-top: 0vh;
             
             margin-bottom: 0vh;

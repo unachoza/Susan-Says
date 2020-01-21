@@ -160,6 +160,7 @@ goB.addEventListener('click', () => {
         score += colorNum.length * 10;
         gamePage.style.visibility = 'hidden';
         // susanBlink(colorNum);
+        console.log(nextLevel.style)
         nextLevel.style.visibility = 'visible';
       }
     }
@@ -180,8 +181,4 @@ document.getElementById('nextLevel').addEventListener('click', () => {
   document.body.style.backgroundRepeat = 'no-reapeat';
 });
 
-  function reloading (){
-    console.log('refresh!')
-    location.reload();
-
-}
+  

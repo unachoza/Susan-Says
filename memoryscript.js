@@ -44,9 +44,7 @@ const restart = document.querySelector('#restart');
 const nextLevel = document.getElementById('nextLevel');
 const header = document.querySelector('h1');
 
-
-
-playButton.addEventListener('click', function() {
+playButton.addEventListener('click', () => {
   instructionsPage.style.visibility = 'hidden';
   gamePage.style.visibility = 'visible';
   playButton.style.visibility = 'hidden';
@@ -78,13 +76,13 @@ const buttons = [
   },
 ];
 
-goB.addEventListener('click', function() {
+goB.addEventListener('click', () => {
   let user = [];
   // //**Button event listeners
   // //Color Buttons to get User's Sequence
   function clickColorButtons() {
     for (let i = 0; i < buttons.length - 1; i++) {
-      buttons[i]['dom'].addEventListener('click', function() {
+      buttons[i]['dom'].addEventListener('click', () => {
         user.push(buttons[i]['value']);
         winOrLoseAfter(colorNum, user);
       });
@@ -98,18 +96,10 @@ goB.addEventListener('click', function() {
 
   function susanBlink(colorNum) {
     for (let i = 0; i < colorNum.length; i++) {
-      
-      j = setTimeout(function() {
+      setTimeout(() => {
         whichColorBlinks(colorNum[i]);
-      }, (i * 500));
+      }, i * 500);
     }
-    return j;
-  }
-  function nextLevelReachedStopBlinking(j) {
-
-    clearTimeout(j);
-    console.log(j)
-
   }
 
   susanBlink(colorNum);
@@ -146,7 +136,6 @@ goB.addEventListener('click', function() {
   function winOrLoseAfter(colorNum, user) {
     let loser = false;
     if (user.length === colorNum.length) {
-
       for (let i = 0; i < colorNum.length; i++) {
         if (colorNum[i] !== user[i]) {
           loser = true;
@@ -168,11 +157,10 @@ goB.addEventListener('click', function() {
     }
   }
 
-  document.getElementById('nextLevel').addEventListener('click', function(j) {
+  document.getElementById('nextLevel').addEventListener('click', () => {
     gamePage.style.visibility = 'visible';
     nextLevel.style.visibility = 'hidden';
     user = [];
-    nextLevelReachedStopBlinking(j);
   });
 });
 
@@ -182,7 +170,6 @@ document.getElementById('nextLevel').addEventListener('click', () => {
   document.body.style.background = `url(${bImages[i]})`;
   document.body.style.backgroundSize = 'cover';
   document.body.style.backgroundRepeat = 'no-reapeat';
-
 });
 
 /*   

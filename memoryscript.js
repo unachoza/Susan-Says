@@ -172,12 +172,15 @@ document.getElementById('nextLevel').addEventListener('click', () => {
   document.body.style.backgroundRepeat = 'no-reapeat';
 });
 
+  function reloading (){
+    console.log('refresh!')
+    location.reload();
+
+}
+
 /*   
-these changes
 High Score Leader Board
-    Alerts display "win next levelt"; 'fail display score"
     Build High Score Board
-    Transitions for Win/lose Alerts
     High score board logic 
     Add background img of impressive women speaking, change img every level
      */

@@ -12,8 +12,14 @@ body{
     
         
 }
+ul{
+    text-decoration: none
+}
+li{
+    list-style-type: none;
+}
 #nextLevel{
-    visibility: hidden;
+    display: none;
 }
 
 header {
@@ -216,6 +222,23 @@ transform: rotate(180deg);
     to {background-color: rgb(211, 30, 211);}
 }
 
+input {
+    height: 39px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 18px;
+    background-color: rgba(128, 128, 128, 0.9);
+    text-align: center;
+}
+::placeholder{
+    color: black
+
+}
+#user-name-input{
+    margin-left: 100px
+}
+.placeholder{
+    color: black;
+}
 /* How to make a class active 
 https://www.w3schools.com/howto/howto_js_active_element.asp */
 
@@ -244,7 +267,9 @@ https://www.w3schools.com/howto/howto_js_active_element.asp */
       line-height: 1.6;
       width: 28vw;
   }
-
+#restart{
+    /* visibility: hidden; */
+}
   .alert {
     margin-top: 800px;
     border: whitesmoke solid 2px;
@@ -408,6 +433,7 @@ a:hover {
         }
         #playbutton {
             margin-left: 16vw;
+             
 
         }
     

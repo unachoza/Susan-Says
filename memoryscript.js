@@ -1,5 +1,6 @@
 //Intro this project is personal to me because it's a memory game with a healthy dose of feminism.
 let bImages = [
+
   'https://res.cloudinary.com/dh41vh9dx/image/upload/v1546220914/susan-sarandon.jpg',
   'https://res.cloudinary.com/dh41vh9dx/image/upload/v1546220905/maya-angula.jpg',
   'https://res.cloudinary.com/dh41vh9dx/image/upload/v1538344728/frida_K.jpg',
@@ -24,6 +25,7 @@ let bImages = [
   'https://res.cloudinary.com/dh41vh9dx/image/upload/v1546220913/oprah.png',
 ];
 
+
 let colorNum = [0];
 let score = 0;
 //Dom Creation and saved variables
@@ -33,6 +35,7 @@ const red = document.querySelector('#red');
 const goB = document.querySelector('#go');
 const green = document.querySelector('#green');
 const purple = document.querySelector('#purple');
+
 
 const userScore = document.querySelector('#display-score');
 const gamePage = document.querySelector('#page2');
@@ -44,6 +47,7 @@ const restart = document.querySelector('#restart');
 const nextLevel = document.getElementById('nextLevel');
 const header = document.querySelector('h1');
 
+
 playButton.addEventListener('click', () => {
   instructionsPage.style.visibility = 'hidden';
   gamePage.style.visibility = 'visible';
@@ -51,6 +55,7 @@ playButton.addEventListener('click', () => {
   nextLevel.style.visibility = 'hidden';
   header.style.visibility = 'hidden';
 });
+
 
 //making buttons objects
 const buttons = [
@@ -131,6 +136,7 @@ goB.addEventListener('click', () => {
         }, 400);
         break;
     }
+
   }
 
   function winOrLoseAfter(colorNum, user) {
@@ -146,6 +152,8 @@ goB.addEventListener('click', () => {
           scorePage.style.visibility = 'visible';
 
           break;
+
+
         }
       }
       if (!loser) {
@@ -172,12 +180,8 @@ document.getElementById('nextLevel').addEventListener('click', () => {
   document.body.style.backgroundRepeat = 'no-reapeat';
 });
 
-/*   
-these changes
-High Score Leader Board
-    Alerts display "win next levelt"; 'fail display score"
-    Build High Score Board
-    Transitions for Win/lose Alerts
-    High score board logic 
-    Add background img of impressive women speaking, change img every level
-     */
+  function reloading (){
+    console.log('refresh!')
+    location.reload();
+
+}

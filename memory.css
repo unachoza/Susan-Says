@@ -10,15 +10,15 @@ body{
     font-family: 'Merriweather', serif;
     /* background-repeat: no-repeat; */
     /* margin-left: 200px; */
-    
-        
 }
+
 ul{
     text-decoration: none
 }
 li{
     list-style-type: none;
 }
+
 #nextLevel{
     visibility: hidden;
 }
@@ -32,6 +32,7 @@ header {
     margin-top: 5vh;
 
 }
+
 h1{
      
       font-size: 35px;

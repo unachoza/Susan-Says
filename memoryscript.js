@@ -98,6 +98,7 @@ goB.addEventListener('click', () => {
   let element = 0;
   element = Math.floor(Math.random() * 4);
   colorNum.push(element);
+  console.log(colorNum)
 
   function susanBlink(colorNum) {
     for (let i = 0; i < colorNum.length; i++) {
@@ -159,8 +160,6 @@ goB.addEventListener('click', () => {
       if (!loser) {
         score += colorNum.length * 10;
         gamePage.style.visibility = 'hidden';
-        // susanBlink(colorNum);
-        console.log(nextLevel.style)
         nextLevel.style.visibility = 'visible';
       }
     }

@@ -1,583 +1,508 @@
 html {
-    display: block;
+  display: block;
 }
-body{
-    display: flex;
-    flex-direction: column;
-    background: url("https://res.cloudinary.com/dh41vh9dx/image/upload/v1538350067/susan-sarandon.jpg") no-repeat center center fixed;
-    background-color: #cccccc;
-    background-size: cover;
-    font-family: 'Merriweather', serif;
-    /* background-repeat: no-repeat; */
-    /* margin-left: 200px; */
-}
-html, body{
-
-    height: 100%;   /* ges Hoehe der Seite -> weitere Hoehenangaben werden relativ hierzu ausgewertet */
-    overflow: hidden;   /*  hide scrollbars */
-    opacity: 1.0;
-    -webkit-transition: background 0.5s linear;
-    -moz-transition: background 0.5s linear;
-    -o-transition: background 0.5s linear;
-    -ms-transition: background 0.5s linear;
-    transition: background 0.5s linear;
-    }
-
-ul{
-    text-decoration: none
-}
-li{
-    list-style-type: none;
+body {
+  display: flex;
+  flex-direction: column;
+  background: url('https://res.cloudinary.com/dh41vh9dx/image/upload/v1538350067/susan-sarandon.jpg') no-repeat center
+    center fixed;
+  background-color: #cccccc;
+  background-size: cover;
+  font-family: 'Merriweather', serif;
+  transition: background-image 0.7s ease-in-out;
 }
 
-#nextLevel{
-    visibility: hidden;
+
+#nextLevel {
+  visibility: hidden;
 }
 
 header {
-    text-align: center;
-    width: 400px;
+  text-align: center;
+  width: 400px;
 }
 .page {
-    position: absolute;
-    margin-top: 5vh;
-
+  position: absolute;
+  margin-top: 5vh;
 }
 
-h1{
-     
-      font-size: 35px;
-        margin-top: 2vh;
-        margin-left: 17vw;
-        margin-bottom: 2vh;
-    
+h1 {
+  font-size: 35px;
+  margin-top: 2vh;
+  margin-left: 17vw;
+  margin-bottom: 2vh;
 }
 h4 {
-    font-family: 'Charmonman', cursive;
-    margin-top: -1vh;
-    margin-left: 2vw;
+  font-family: 'Charmonman', cursive;
+  margin-top: -1vh;
+  margin-left: 2vw;
 }
 
 h5 {
-    font-family: 'Orbitron', sans-serif;
-    font-size: 25px;
-    margin-top: 500px;
-    border-radius: 10px;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 25px;
+  margin-top: 500px;
+  border-radius: 10px;
 }
-
-
-/* .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    } */
 
 .top {
-transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 .side {
-
 }
 .color {
-    position: fixed;
-    justify-items: center;
-    height: 100px;
-    width: 200px;
-    border-radius: 8px;
-    opacity: .9;
-    flex-grow: 1
+  position: fixed;
+  justify-items: center;
+  height: 100px;
+  width: 200px;
+  border-radius: 8px;
+  opacity: 0.9;
+  flex-grow: 1;
 }
 #blue {
-    background: blue;
-    position: fixed;
-    z-index: 1;
-    top: 14.5vh;
-    left: 18.5vw;
-    transform: rotate(0deg);
-    border-radius: 50px 50px 20px 20px;
-    font-family: 'Orbitron', sans-serif;
-    font-size: 2em;
-    color: rgb(6, 6, 105)
-    
+  background: blue;
+  position: fixed;
+  z-index: 1;
+  top: 14.5vh;
+  left: 18.5vw;
+  transform: rotate(0deg);
+  border-radius: 50px 50px 20px 20px;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2em;
+  color: rgb(6, 6, 105);
 }
 #blue:focus {
-    animation: grow .3s;
+  animation: grow 0.3s;
 }
-#blue:active{
-    background: rgb(33, 187, 238);
+#blue:active {
+  background: rgb(33, 187, 238);
 }
 #red {
-    z-index: 2;
-    background: red;
-    top: 20vh;
-    left: 26.5vw;
-    transform: rotate(-90deg) translate(0, -100%);
-    transform-origin: 100% 0;
-    border-radius: 20px 20px 50px 50px;
-    font-family: 'Orbitron', sans-serif;
-    font-size: 2em;
-    color: rgb(175, 5, 5)
+  z-index: 2;
+  background: red;
+  top: 20vh;
+  left: 26.5vw;
+  transform: rotate(-90deg) translate(0, -100%);
+  transform-origin: 100% 0;
+  border-radius: 20px 20px 50px 50px;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2em;
+  color: rgb(175, 5, 5);
 }
 #red:focus {
-    animation: grow .3s;
+  animation: grow 0.3s;
 }
-#red:active{
-    background: rgb(247, 50, 188);
+#red:active {
+  background: rgb(247, 50, 188);
 }
 #green {
-    z-index: 3;
-    background: green;
-    top: 44.5vh;
-    left: 18.5vw;
-    transform: rotate(0deg);
-    border-radius: 20px 20px 50px 50px;
-    font-family: 'Orbitron', sans-serif;
-    font-size: 2em;
-    color: rgb(2, 83, 2)
-    
+  z-index: 3;
+  background: green;
+  top: 44.5vh;
+  left: 18.5vw;
+  transform: rotate(0deg);
+  border-radius: 20px 20px 50px 50px;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2em;
+  color: rgb(2, 83, 2);
 }
 #green:focus {
-    animation: grow .3s;
+  animation: grow 0.3s;
 }
 #green:active {
-    background: rgb(132, 216, 7);
+  background: rgb(132, 216, 7);
 }
 #purple {
-    z-index: 4;
-    background: purple;
-    left: 3vw;
-    top: 20vh;
-    transform: rotate(-90deg) translate(0, -100%);
-    transform-origin: 100% 0;
-    border-radius: 50px 50px 20px 20px;
-    font-family: 'Orbitron', sans-serif;
-    font-size: 2em;
-    color: rgb(92, 2, 92)
-    
+  z-index: 4;
+  background: purple;
+  left: 3vw;
+  top: 20vh;
+  transform: rotate(-90deg) translate(0, -100%);
+  transform-origin: 100% 0;
+  border-radius: 50px 50px 20px 20px;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2em;
+  color: rgb(92, 2, 92);
 }
 #purple:focus {
-    animation: grow .3s;
+  animation: grow 0.3s;
 }
 #purple:active {
-    background: rgb(236, 24, 236);
+  background: rgb(236, 24, 236);
 }
 #go {
-    z-index: 1;
-    background: black;
-    height: 100px;
-    width: 140px;
-    border-radius: 45%;
-    top: 29.5vh;
-    left: 21vw;   
-    color: white;
-    font-size: 3em;
-    font-family: 'Orbitron', sans-serif;
-
+  z-index: 1;
+  background: black;
+  height: 100px;
+  width: 140px;
+  border-radius: 45%;
+  top: 29.5vh;
+  left: 21vw;
+  color: white;
+  font-size: 3em;
+  font-family: 'Orbitron', sans-serif;
 }
 #go:focus {
-    animation: goGrow .2s;
+  animation: goGrow 0.2s;
 }
 #go:active {
-    background: rgb(48, 45, 45)
+  background: rgb(48, 45, 45);
 }
 #background {
-    z-index: 5;
-    top: -20px;
-    left: -23px;
-    height: 390px;
-    width: 446px;
-    border-radius: 45%;
-    background: grey;
-    border: 1.5px solid black;
-    opacity: .8;
+  z-index: 5;
+  top: -20px;
+  left: -23px;
+  height: 390px;
+  width: 446px;
+  border-radius: 45%;
+  background: grey;
+  border: 1.5px solid black;
+  opacity: 0.8;
 }
 .blink {
-    animation: blink .5s; 
+  animation: blink 0.5s;
 }
 @keyframes grow {
-    from {
-      height: 100px;
-      width: 200px;
-    } to {
-      height: 115px;
-      width: 220px;
-    }
-   }
+  from {
+    height: 100px;
+    width: 200px;
+  }
+  to {
+    height: 115px;
+    width: 220px;
+  }
+}
 @keyframes goGrow {
-    from {
+  from {
     height: 100px;
     width: 140px;
-    } to {
+  }
+  to {
     height: 110px;
     width: 160px;
-    }
+  }
 }
 @keyframes blinkBlue {
-    from {background-color: blue;}
-    to {background-color: rgb(33, 187, 238);}
+  from {
+    background-color: blue;
+  }
+  to {
+    background-color: rgb(33, 187, 238);
+  }
 }
 @keyframes blinkRed {
-    from {background-color: red;}
-    to {background-color: rgb(247, 100, 203);}
+  from {
+    background-color: red;
+  }
+  to {
+    background-color: rgb(247, 100, 203);
+  }
 }
 @keyframes blinkGreen {
-    from {background-color: green;}
-    to {background-color: rgb(132, 216, 7);}
+  from {
+    background-color: green;
+  }
+  to {
+    background-color: rgb(132, 216, 7);
+  }
 }
 @keyframes blinkPurple {
-    from {background-color: purple;}
-    to {background-color: rgb(211, 30, 211);}
+  from {
+    background-color: purple;
+  }
+  to {
+    background-color: rgb(211, 30, 211);
+  }
 }
 
 input {
-    height: 39px;
-    font-family: 'Orbitron', sans-serif;
-    font-size: 18px;
-    background-color: rgba(128, 128, 128, 0.9);
-    text-align: center;
+  height: 39px;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 18px;
+  background-color: rgba(128, 128, 128, 0.9);
+  text-align: center;
 }
-::placeholder{
-    color: black
-
+::placeholder {
+  color: black;
 }
-#user-name-input{
-    margin-left: 100px
+#user-name-input {
+  margin-left: 100px;
 }
-.placeholder{
-    color: black;
+.placeholder {
+  color: black;
 }
 /* How to make a class active 
 https://www.w3schools.com/howto/howto_js_active_element.asp */
 
 .activeB {
-    animation: blinkBlue .5s;
-      
-  }
-  .activeR {
-    animation: blinkRed .5s; 
-       
-  }
-  .activeG {
-    animation: blinkGreen .5s;  
-      
-  }
-  .activeP {
-    animation: blinkPurple .5s; 
-       
-  }
-  .score {
-      margin-top: 50px;
-      margin-bottom: 5px;
-  }
-  #display-score {
-      margin-top: 40px;
-      line-height: 1.6;
-      width: 28vw;
-  }
-#restart{
-    /* visibility: hidden; */
+  animation: blinkBlue 0.5s;
 }
-  .alert {
-    margin-top: 800px;
-    border: whitesmoke solid 2px;
-    background-color: #99a036;
-    color: black;
-    opacity: 1;
-    transition: opacity 0.6s;
-    display: none; 
-    animation: expandAlert 1.5s ease-in-out forwards;
+.activeR {
+  animation: blinkRed 0.5s;
 }
-@keyframes expandAlert {
-    from { padding: 5px }
-    to {  padding: 60px }
+.activeG {
+  animation: blinkGreen 0.5s;
 }
-.page {
-    position: absolute;
+.activeP {
+  animation: blinkPurple 0.5s;
+}
+.score {
+  margin-top: 50px;
+  margin-bottom: 5px;
+}
+#display-score {
+  margin-top: 40px;
+  line-height: 1.6;
+  width: 28vw;
+}
 
+
+.page {
+  position: absolute;
 }
 #page1 {
-    
-    visibility: visible;
-    border-radius: 10px;
-    width: 400px;
-    background-color: white;
-    opacity: .35;
-    text-align: center;
-    margin-left: 8vw;
+  visibility: visible;
+  border-radius: 10px;
+  width: 400px;
+  background-color: white;
+  opacity: 0.35;
+  text-align: center;
+  margin-left: 8vw;
 }
 #page2 {
-    visibility: hidden;
-    widows: 400px;
+  visibility: hidden;
+  widows: 400px;
 }
 #page3 {
-    visibility: hidden;
-    top: 20vh;
-    left: 17vw;
+  visibility: hidden;
+  top: 20vh;
+  left: 17vw;
 }
 .button {
-    height: 50px;
-     border: solid 1px black;
-     background-color: #99a036;
-     border-radius: 6px;
-     font-family: 'Orbitron', sans-serif;
-     font-size: 18px;
-     z-index: 1;
+  height: 50px;
+  border: solid 1px black;
+  background-color: #99a036;
+  border-radius: 6px;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 18px;
+  z-index: 1;
 }
-.theseButtons{
-    padding-top: 55vh;
-    padding-left: 8vw;
-    padding-bottom: 3vh;
-    z-index: 1;
-
-    
-   
+.theseButtons {
+  padding-top: 55vh;
+  padding-left: 8vw;
+  padding-bottom: 3vh;
+  z-index: 1;
 }
-a{
-    text-decoration: none; 
-    color: black;
+a {
+  text-decoration: none;
+  color: black;
 }
 a:hover {
-    font-weight:bold;
+  font-weight: bold;
+  color: white;
+}
+
+.page-container {
+  height: 100vh;
+}
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
+  .color {
+    position: fixed;
+    justify-items: center;
+    margin-top: 15vh;
+    margin-left: 3vw;
+    height: 24vh;
+    width: 20vw;
+    border-radius: 8px;
+    opacity: 0.9;
+    flex-grow: 1;
+  }
+  #blue {
+    background: blue;
+    position: fixed;
+    z-index: 1;
+    top: 1vh;
+    left: 100px;
+    transform: rotate(0deg);
+    border-radius: 50px 50px 20px 20px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2em;
+    color: rgb(6, 6, 105);
+  }
+  #green {
+    z-index: 3;
+    background: green;
+    top: 200px;
+    left: 100px;
+    border-radius: 20px 20px 50px 50px;
+    font-family: 'Orbitron', sans-serif;
+    transform: rotate(0deg);
+    font-size: 2em;
+    color: rgb(2, 83, 2);
+  }
+  #go {
+    z-index: 1;
+    background: black;
+    height: 100px;
+    width: 140px;
+    border-radius: 45%;
+    top: 100px;
+    left: 13.5vw;
     color: white;
+    font-size: 3em;
+    font-family: 'Orbitron', sans-serif;
+  }
+  #purple {
+    z-index: 4;
+    background: purple;
+    top: 70px;
+    left: -7.8vw;
+    transform: rotate(-90deg) translate(0, -100%);
+    transform-origin: 100% 0;
+    border-radius: 50px 50px 20px 20px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2em;
+    color: rgb(92, 2, 92);
+  }
+  #red {
+    z-index: 2;
+    background: red;
+    top: 70px;
+    left: 23.5vw;
+    transform: rotate(-90deg) translate(0, -100%);
+    transform-origin: 100% 0;
+    border-radius: 20px 20px 50px 50px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2em;
+    color: rgb(175, 5, 5);
+  }
+  h1 {
+    margin-top: 0vh;
+
+    margin-bottom: 0vh;
+  }
+  #display-score {
+    margin-top: 40px;
+    line-height: 1.6;
+    width: 28vw;
+  }
+  #nextLevel {
+    margin-left: -5vw;
+    margin-top: -30vh;
+  }
+  #playbutton {
+    margin-left: 16vw;
+  }
 }
-
-.page-container{
-    height: 100vh;
-}
-
-
-@media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 812px) 
-  and (-webkit-min-device-pixel-ratio: 3)
-  and (orientation: landscape) { 
-    .color {
-        position: fixed;
-        justify-items: center;
-        margin-top: 15vh;
-        margin-left: 3vw;
-        height: 24vh;
-        width: 20vw;
-        border-radius: 8px;
-        opacity: .9;
-        flex-grow: 1;
-    }
-    #blue {
-        background: blue;
-        position: fixed;
-        z-index: 1;
-        top: 1vh;
-        left: 100px;
-        transform: rotate(0deg);
-        border-radius: 50px 50px 20px 20px;
-        font-family: 'Orbitron', sans-serif;
-        font-size: 2em;
-        color: rgb(6, 6, 105);
-    }
-    #green {
-        z-index: 3;
-        background: green;
-        top: 200px;
-        left: 100px;
-        border-radius: 20px 20px 50px 50px;
-        font-family: 'Orbitron', sans-serif;
-        transform: rotate(0deg);
-        font-size: 2em;
-        color: rgb(2, 83, 2);
-    }
-    #go {
-        z-index: 1;
-        background: black;
-        height: 100px;
-        width: 140px;
-        border-radius: 45%;
-        top: 100px;
-        left: 13.5vw;
-        color: white;
-        font-size: 3em;
-        font-family: 'Orbitron', sans-serif;
-    }
-    #purple {
-        z-index: 4;
-        background: purple;
-        top: 70px;
-        left: -7.8vw;
-        transform: rotate(-90deg) translate(0, -100%);
-        transform-origin: 100% 0;
-        border-radius: 50px 50px 20px 20px;
-        font-family: 'Orbitron', sans-serif;
-        font-size: 2em;
-        color: rgb(92, 2, 92);
-    }
-    #red {
-        z-index: 2;
-        background: red;
-        top: 70px;
-        left: 23.5vw;
-        transform: rotate(-90deg) translate(0, -100%);
-        transform-origin: 100% 0;
-        border-radius: 20px 20px 50px 50px;
-        font-family: 'Orbitron', sans-serif;
-        font-size: 2em;
-        color: rgb(175, 5, 5);
-    }
-    h1 {
-       
-        
-          
-            margin-top: 0vh;
-            
-            margin-bottom: 0vh;
-        }
-        #display-score {
-            margin-top: 40px;
-            line-height: 1.6;
-            width: 28vw;
-        }
-        #nextLevel{
-            margin-left: -5vw;
-            margin-top: -30vh;
-        }
-        #playbutton {
-            margin-left: 16vw;
-             
-
-        }
-    
-}
-
-
 
 .theseButtons {
-    padding-top: none;
-    padding-left: none;
+  padding-top: none;
+  padding-left: none;
 }
 
-    @media only screen 
-    and (min-device-width: 375px) 
-    and (max-device-width: 667px) 
-    and (-webkit-min-device-pixel-ratio: 2)
-    and (orientation: landscape) { 
-      .color {
-          position: fixed;
-          justify-items: center;
-          margin-top: 15vh;
-          margin-left: 3vw;
-          height: 22vh;
-          width: 24vw;;
-          border-radius: 8px;
-          opacity: .9;
-          flex-grow: 1;
-      }
-      #blue {
-          background: blue;
-          position: fixed;
-          z-index: 1;
-          top: 1vh;
-          left: 13vw;
-          transform: rotate(0deg);
-          border-radius: 50px 50px 20px 20px;
-          font-family: 'Orbitron', sans-serif;
-          font-size: 2em;
-          color: rgb(6, 6, 105);
-      }
-      #green {
-          z-index: 3;
-          background: green;
-          top: 200px;
-          left: 13VW;
-          transform: rotate(0deg);
-          border-radius: 20px 20px 50px 50px;
-          font-family: 'Orbitron', sans-serif;
-          font-size: 2em;
-          color: rgb(2, 83, 2);
-      }
-      #go {
-          z-index: 1;
-          background: black;
-          height: 100px;
-          width: 140px;
-          border-radius: 45%;
-          top: 24.5vh;
-          left: 14.5vw;
-          color: white;
-          font-size: 3em;
-          font-family: 'Orbitron', sans-serif;
-      }
-      #purple {
-          z-index: 4;
-          background: purple;
-          top: 70px;
-          left: -11vw;
-          transform: rotate(-90deg) translate(0, -100%);
-          transform-origin: 100% 0;
-          border-radius: 50px 50px 20px 20px;
-          font-family: 'Orbitron', sans-serif;
-          font-size: 2em;
-          color: rgb(92, 2, 92);
-      }
-      #red {
-          z-index: 2;
-          background: red;
-          top: 70px;
-          left: 25.2vw;
-          transform: rotate(-90deg) translate(0, -100%);
-          transform-origin: 100% 0;
-          border-radius: 20px 20px 50px 50px;
-          font-family: 'Orbitron', sans-serif;
-          font-size: 2em;
-          color: rgb(175, 5, 5);
-      }
-      h1 {
-         
-      }
-      #display-score {
-        margin-top: 40px;
-        line-height: 1.6;
-        width: 28vw;
-    }
-    #nextLevel{
-        margin-left: -5vw;
-        margin-top: -30vh;
-    }
-    #playbutton {
-        margin-left: 16vw;
-
-    }
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+  .color {
+    position: fixed;
+    justify-items: center;
+    margin-top: 15vh;
+    margin-left: 3vw;
+    height: 22vh;
+    width: 24vw;
+    border-radius: 8px;
+    opacity: 0.9;
+    flex-grow: 1;
   }
+  #blue {
+    background: blue;
+    position: fixed;
+    z-index: 1;
+    top: 1vh;
+    left: 13vw;
+    transform: rotate(0deg);
+    border-radius: 50px 50px 20px 20px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2em;
+    color: rgb(6, 6, 105);
+  }
+  #green {
+    z-index: 3;
+    background: green;
+    top: 200px;
+    left: 13vw;
+    transform: rotate(0deg);
+    border-radius: 20px 20px 50px 50px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2em;
+    color: rgb(2, 83, 2);
+  }
+  #go {
+    z-index: 1;
+    background: black;
+    height: 100px;
+    width: 140px;
+    border-radius: 45%;
+    top: 24.5vh;
+    left: 14.5vw;
+    color: white;
+    font-size: 3em;
+    font-family: 'Orbitron', sans-serif;
+  }
+  #purple {
+    z-index: 4;
+    background: purple;
+    top: 70px;
+    left: -11vw;
+    transform: rotate(-90deg) translate(0, -100%);
+    transform-origin: 100% 0;
+    border-radius: 50px 50px 20px 20px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2em;
+    color: rgb(92, 2, 92);
+  }
+  #red {
+    z-index: 2;
+    background: red;
+    top: 70px;
+    left: 25.2vw;
+    transform: rotate(-90deg) translate(0, -100%);
+    transform-origin: 100% 0;
+    border-radius: 20px 20px 50px 50px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2em;
+    color: rgb(175, 5, 5);
+  }
+  h1 {
+  }
+  #display-score {
+    margin-top: 40px;
+    line-height: 1.6;
+    width: 28vw;
+  }
+  #nextLevel {
+    margin-left: -5vw;
+    margin-top: -30vh;
+  }
+  #playbutton {
+    margin-left: 16vw;
+  }
+}
 
-
-  
-
-
-  @media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 667px) 
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (orientation: portrait) { 
-    body {
-        background: url(https://res.cloudinary.com/dh41vh9dx/image/upload/v1545059996/Landscape-Mode.png) no-repeat center center fixed;
-        background-size: contain;
-        background-color: black;
-        background-size: 80%;
-    }
-    .theseButtons {
-        visibility: hidden;
-    }
-    #page1{
-        
-            visibility: hidden
-        }
-    }
-  
-
-    
-
-
-
-
-
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+  body {
+    background: url(https://res.cloudinary.com/dh41vh9dx/image/upload/v1545059996/Landscape-Mode.png) no-repeat center
+      center fixed;
+    background-size: contain;
+    background-color: black;
+    background-size: 80%;
+  }
+  .theseButtons {
+    visibility: hidden;
+  }
+  #page1 {
+    visibility: hidden;
+  }
+}
 
 /* }
 @media only screen and (max-width:667px){

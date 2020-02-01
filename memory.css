@@ -72,7 +72,7 @@ h5 {
   color: rgb(6, 6, 105);
 }
 #blue:focus {
-  animation: grow 0.3s;
+  animation: grow 0.15s;
 }
 #blue:active {
   background: rgb(33, 187, 238);
@@ -90,7 +90,7 @@ h5 {
   color: rgb(175, 5, 5);
 }
 #red:focus {
-  animation: grow 0.3s;
+  animation: grow 0.15s;
 }
 #red:active {
   background: rgb(247, 50, 188);
@@ -107,7 +107,7 @@ h5 {
   color: rgb(2, 83, 2);
 }
 #green:focus {
-  animation: grow 0.3s;
+  animation: grow 0.15s;
 }
 #green:active {
   background: rgb(132, 216, 7);
@@ -125,7 +125,7 @@ h5 {
   color: rgb(92, 2, 92);
 }
 #purple:focus {
-  animation: grow 0.3s;
+  animation: grow 0.15s;
 }
 #purple:active {
   background: rgb(236, 24, 236);

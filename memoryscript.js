@@ -1,4 +1,4 @@
-//Intro this project is personal to me because it's a memory game with a healthy dose of feminism.
+//This is a memory game with a healthy dose of feminism.
 let bImages = [
 
   'https://res.cloudinary.com/dh41vh9dx/image/upload/v1546220914/susan-sarandon.jpg',

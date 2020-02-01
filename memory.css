@@ -1,7 +1,7 @@
-html {
-  display: block;
-}
+html,
 body {
+  margin: 0px;
+  padding: 0px;
   display: flex;
   flex-direction: column;
   background: url('https://res.cloudinary.com/dh41vh9dx/image/upload/v1538350067/susan-sarandon.jpg') no-repeat center
@@ -11,57 +11,60 @@ body {
   font-family: 'Merriweather', serif;
   transition: background-image 0.7s ease-in-out;
 }
-
-
-#nextLevel {
-  visibility: hidden;
-}
-
 header {
-  text-align: center;
-  width: 400px;
-}
-.page {
-  position: absolute;
-  margin-top: 5vh;
-}
+    text-align: center;
+    width: 400px;
+  }
+****** Text *******
+#nextLevel {
+    visibility: hidden;
+  }
+  
+  
+  .page {
+    position: absolute;
+    margin-top: 5vh;
+  }
+  
+  h1 {
+    font-size: 35px;
+    margin-top: 2vh;
+    margin-left: 17vw;
+    margin-bottom: 2vh;
+  }
+  h4 {
+    font-family: 'Charmonman', cursive;
+    margin-top: -1vh;
+    margin-left: 2vw;
+  }
+  
+  h5 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 25px;
+    margin-top: 500px;
+    border-radius: 10px;
+  }
+  
+****** Game Elements ******
 
-h1 {
-  font-size: 35px;
-  margin-top: 2vh;
-  margin-left: 17vw;
-  margin-bottom: 2vh;
+.susan-container{
+border: 3px solid balck;
+height: 400px;
+width: 400px;
+position: relative
 }
-h4 {
-  font-family: 'Charmonman', cursive;
-  margin-top: -1vh;
-  margin-left: 2vw;
-}
-
-h5 {
-  font-family: 'Orbitron', sans-serif;
-  font-size: 25px;
-  margin-top: 500px;
-  border-radius: 10px;
-}
-
-.top {
-  transform: rotate(180deg);
-}
-.side {
-}
+/* game buttons */
 .color {
-  position: fixed;
+  /* position: fixed; */
   justify-items: center;
   height: 100px;
   width: 200px;
-  border-radius: 8px;
   opacity: 0.9;
   flex-grow: 1;
 }
 #blue {
   background: blue;
-  position: fixed;
+  position: absolute;
   z-index: 1;
   top: 14.5vh;
   left: 18.5vw;
@@ -78,6 +81,7 @@ h5 {
   background: rgb(33, 187, 238);
 }
 #red {
+    position: absolute;
   z-index: 2;
   background: red;
   top: 20vh;
@@ -96,6 +100,7 @@ h5 {
   background: rgb(247, 50, 188);
 }
 #green {
+    position: absolute;
   z-index: 3;
   background: green;
   top: 44.5vh;
@@ -113,6 +118,7 @@ h5 {
   background: rgb(132, 216, 7);
 }
 #purple {
+    position: absolute;
   z-index: 4;
   background: purple;
   left: 3vw;
@@ -256,7 +262,6 @@ https://www.w3schools.com/howto/howto_js_active_element.asp */
   width: 28vw;
 }
 
-
 .page {
   position: absolute;
 }
@@ -271,13 +276,17 @@ https://www.w3schools.com/howto/howto_js_active_element.asp */
 }
 #page2 {
   visibility: hidden;
-  widows: 400px;
+  width: 400px;
+  height: 400px;
 }
 #page3 {
   visibility: hidden;
   top: 20vh;
   left: 17vw;
 }
+#nextLevel {
+    visibility: hidden;
+  }
 .button {
   height: 50px;
   border: solid 1px black;
@@ -320,7 +329,7 @@ a:hover {
   }
   #blue {
     background: blue;
-    position: fixed;
+    position: absolute;
     z-index: 1;
     top: 1vh;
     left: 100px;
@@ -366,6 +375,7 @@ a:hover {
     color: rgb(92, 2, 92);
   }
   #red {
+    position: absolute;
     z-index: 2;
     background: red;
     top: 70px;
@@ -414,6 +424,7 @@ a:hover {
     flex-grow: 1;
   }
   #blue {
+    position: absolute;
     background: blue;
     position: fixed;
     z-index: 1;

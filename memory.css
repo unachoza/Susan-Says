@@ -12,62 +12,130 @@ body {
   transition: background-image 0.7s ease-in-out;
 }
 header {
-    text-align: center;
-    width: 400px;
-  }
-****** Text *******
-#nextLevel {
-    visibility: hidden;
-  }
-  
-  
-  .page {
-    position: absolute;
-    margin-top: 5vh;
-  }
-  
-  h1 {
-    font-size: 35px;
-    margin-top: 2vh;
-    margin-left: 17vw;
-    margin-bottom: 2vh;
-  }
-  h4 {
-    font-family: 'Charmonman', cursive;
-    margin-top: -1vh;
-    margin-left: 2vw;
-  }
-  
-  h5 {
-    font-family: 'Orbitron', sans-serif;
-    font-size: 25px;
-    margin-top: 500px;
-    border-radius: 10px;
-  }
-  
-****** Game Elements ******
-
-.susan-container{
-border: 3px solid balck;
-height: 400px;
-width: 400px;
-position: relative
+  text-align: center;
+  width: 400px;
 }
+****** Text ******* #nextLevel {
+  visibility: hidden;
+}
+
+.page {
+  position: absolute;
+  margin-top: 5vh;
+}
+
+h1 {
+  font-size: 35px;
+  margin-top: 2vh;
+  margin-left: 17vw;
+  margin-bottom: 2vh;
+}
+h4 {
+  font-family: 'Charmonman', cursive;
+  margin-top: -1vh;
+  margin-left: 2vw;
+}
+
+h5 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 25px;
+  margin-top: 500px;
+  border-radius: 10px;
+}
+
+****** Game Elements ****** #page2 {
+  visibility: hidden;
+  height: 100%;
+  width: 100%;
+}
+
+.susan-container {
+  height: 50%;
+  width: 60%;
+  border: 3px solid;
+  position: relative;
+}
+
 /* game buttons */
+/* ///fullscreen 11inch/13inch mac until w1200 */
 .color {
-  /* position: fixed; */
   justify-items: center;
-  height: 100px;
-  width: 200px;
+  height: 35%;
+  width: 30%;
+  border-radius: 8px;
   opacity: 0.9;
-  flex-grow: 1;
+}
+#purple {
+  z-index: 4;
+  background: purple;
+  eft: -1%;
+  top: 18%;
+  transform: rotate(-90deg) translate(0, -100%);
+  transform-origin: 100% 0;
+  border-radius: 50% 50% 16% 16%;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2em;
+  color: rgb(92, 2, 92);
+  position: absolute;
+}
+#red {
+  z-index: 2;
+  background: red;
+  top: 18%;
+  left: 45.5%;
+  transform: rotate(-90deg) translate(0, -100%);
+  transform-origin: 100% 0;
+  border-radius: 16% 16% 50% 50%;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2em;
+  color: rgb(175, 5, 5);
+  position: absolute;
+}
+#green {
+  z-index: 3;
+  background: green;
+  top: 71.5%;
+  left: 29.2%;
+  transform: rotate(0deg);
+  border-radius: 16% 16% 50% 50%;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2em;
+  color: rgb(2, 83, 2);
+  position: absolute;
 }
 #blue {
   background: blue;
   position: absolute;
   z-index: 1;
-  top: 14.5vh;
-  left: 18.5vw;
+  top: -2.5%;
+  left: 29.2%;
+  transform: rotate(0deg);
+  border-radius: 50% 50% 16% 16%;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2em;
+  color: rgb(6, 6, 105);
+}
+
+#go {
+  z-index: 1;
+  background: black;
+  height: 35%;
+  width: 27%;
+  border-radius: 45%;
+  top: 17.5%;
+  left: 16.25%;
+  position: absolute;
+  color: white;
+  font-size: 3em;
+  font-family: 'Orbitron', sans-serif;
+}
+
+#blue {
+  background: blue;
+  position: absolute;
+  z-index: 1;
+  top: -2.5%;
+  left: 29.2%;
   transform: rotate(0deg);
   border-radius: 50px 50px 20px 20px;
   font-family: 'Orbitron', sans-serif;
@@ -81,11 +149,11 @@ position: relative
   background: rgb(33, 187, 238);
 }
 #red {
-    position: absolute;
+  position: absolute;
   z-index: 2;
   background: red;
-  top: 20vh;
-  left: 26.5vw;
+  top: 18%;
+  left: 45.5%;
   transform: rotate(-90deg) translate(0, -100%);
   transform-origin: 100% 0;
   border-radius: 20px 20px 50px 50px;
@@ -100,11 +168,11 @@ position: relative
   background: rgb(247, 50, 188);
 }
 #green {
-    position: absolute;
+  position: absolute;
   z-index: 3;
   background: green;
-  top: 44.5vh;
-  left: 18.5vw;
+  top: 71.5%;
+  left: 29.2%;
   transform: rotate(0deg);
   border-radius: 20px 20px 50px 50px;
   font-family: 'Orbitron', sans-serif;
@@ -118,11 +186,11 @@ position: relative
   background: rgb(132, 216, 7);
 }
 #purple {
-    position: absolute;
+  position: absolute;
   z-index: 4;
   background: purple;
-  left: 3vw;
-  top: 20vh;
+  left: -1%;
+  top: 18%;
   transform: rotate(-90deg) translate(0, -100%);
   transform-origin: 100% 0;
   border-radius: 50px 50px 20px 20px;
@@ -139,11 +207,11 @@ position: relative
 #go {
   z-index: 1;
   background: black;
-  height: 100px;
-  width: 140px;
+  height: 35%;
+  width: 24%;
   border-radius: 45%;
-  top: 29.5vh;
-  left: 21vw;
+  top: 33.5%;
+  left: 32%;
   color: white;
   font-size: 3em;
   font-family: 'Orbitron', sans-serif;
@@ -170,22 +238,22 @@ position: relative
 }
 @keyframes grow {
   from {
-    height: 100px;
-    width: 200px;
+    height: 24vh;
+    width: 20vw;
   }
   to {
-    height: 115px;
-    width: 220px;
+    height: 24.1vh;
+    width: 20.1vw;
   }
 }
 @keyframes goGrow {
   from {
-    height: 100px;
-    width: 140px;
+    height: 35%;
+    width: 27%;
   }
   to {
-    height: 110px;
-    width: 160px;
+    height: 36%;
+    width: 28%;
   }
 }
 @keyframes blinkBlue {
@@ -276,8 +344,8 @@ https://www.w3schools.com/howto/howto_js_active_element.asp */
 }
 #page2 {
   visibility: hidden;
-  width: 400px;
-  height: 400px;
+  height: 100%;
+  width: 100%;
 }
 #page3 {
   visibility: hidden;
@@ -285,8 +353,8 @@ https://www.w3schools.com/howto/howto_js_active_element.asp */
   left: 17vw;
 }
 #nextLevel {
-    visibility: hidden;
-  }
+  visibility: hidden;
+}
 .button {
   height: 50px;
   border: solid 1px black;
@@ -325,7 +393,6 @@ a:hover {
     width: 20vw;
     border-radius: 8px;
     opacity: 0.9;
-    flex-grow: 1;
   }
   #blue {
     background: blue;
@@ -421,7 +488,6 @@ a:hover {
     width: 24vw;
     border-radius: 8px;
     opacity: 0.9;
-    flex-grow: 1;
   }
   #blue {
     position: absolute;
@@ -545,11 +611,7 @@ a:hover {
         left: -92px;
         top: -25px;
     }
-    #page2 {
-        visibility: hidden
-    }
-    #page1  
-}
+  
 #page1 {
     
     visibility: visible;

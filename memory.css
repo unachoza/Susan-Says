@@ -12,7 +12,6 @@ body {
   transition: background-image 0.7s ease-in-out;
 }
 
-
 #nextLevel {
   visibility: hidden;
 }
@@ -255,7 +254,6 @@ https://www.w3schools.com/howto/howto_js_active_element.asp */
   line-height: 1.6;
   width: 28vw;
 }
-
 
 .page {
   position: absolute;
@@ -501,6 +499,35 @@ a:hover {
   }
   #page1 {
     visibility: hidden;
+  }
+  .susan-container {
+    visibility: hidden;
+  }
+}
+
+@media only screen and (max-device-width: 420px) and (min-device-width: 300px) and (device-aspect-ratio: 40/71) and (orientation: portrait) {
+  body {
+    background: url(https://res.cloudinary.com/dh41vh9dx/image/upload/v1545059996/Landscape-Mode.png) no-repeat;
+    background-size: 130%;
+    background-color: black;
+    padding-top: 200px;
+  }
+  h1 {
+    visibility: hidden;
+  }
+  .susan-container {
+    visibility: hidden;
+  }
+  .theseButtons {
+    visibility: hidden;
+  }
+  #page1,
+  #page2 {
+    visibility: hidden;
+  }
+  html {
+    background-color: black;
+    background: none;
   }
 }
 

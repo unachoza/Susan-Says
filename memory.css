@@ -211,7 +211,7 @@ h5 {
   width: 24%;
   border-radius: 45%;
   top: 33.5%;
-  left: 32%;
+  left: 30.5%;
   color: white;
   font-size: 3em;
   font-family: 'Orbitron', sans-serif;
@@ -398,8 +398,8 @@ a:hover {
     background: blue;
     position: absolute;
     z-index: 1;
-    top: 1vh;
-    left: 100px;
+    top: -14.5%;
+    left: 29.2%;
     transform: rotate(0deg);
     border-radius: 50px 50px 20px 20px;
     font-family: 'Orbitron', sans-serif;
@@ -409,8 +409,8 @@ a:hover {
   #green {
     z-index: 3;
     background: green;
-    top: 200px;
-    left: 100px;
+    top: 76.5%;
+    left: 29.2%;
     border-radius: 20px 20px 50px 50px;
     font-family: 'Orbitron', sans-serif;
     transform: rotate(0deg);
@@ -420,11 +420,11 @@ a:hover {
   #go {
     z-index: 1;
     background: black;
-    height: 100px;
-    width: 140px;
+    height: 43%;
+    width: 27%;
     border-radius: 45%;
-    top: 100px;
-    left: 13.5vw;
+    top: 33.5%;
+    left: 32.5%;
     color: white;
     font-size: 3em;
     font-family: 'Orbitron', sans-serif;
@@ -432,8 +432,8 @@ a:hover {
   #purple {
     z-index: 4;
     background: purple;
-    top: 70px;
-    left: -7.8vw;
+    left: -4%;
+    top: 11%;
     transform: rotate(-90deg) translate(0, -100%);
     transform-origin: 100% 0;
     border-radius: 50px 50px 20px 20px;
@@ -445,8 +445,8 @@ a:hover {
     position: absolute;
     z-index: 2;
     background: red;
-    top: 70px;
-    left: 23.5vw;
+    top: 11%;
+    left: 47.5%;
     transform: rotate(-90deg) translate(0, -100%);
     transform-origin: 100% 0;
     border-radius: 20px 20px 50px 50px;

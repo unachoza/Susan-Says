@@ -15,6 +15,9 @@ body {
 #nextLevel {
   visibility: hidden;
 }
+#restart{
+visibility: hidden;
+}
 
 header {
   text-align: center;

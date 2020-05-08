@@ -53,6 +53,7 @@ h5 {
 .side {
 }
 .color {
+  touch-action: manipulation;
   position: fixed;
   justify-items: center;
   height: 100px;

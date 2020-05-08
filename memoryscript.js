@@ -25,7 +25,7 @@ let bImages = [
 ];
 
 //Susans Sequence starting point with 3 colors
-let colorNum = [0, 0];
+let colorNum;
 let score;
 //Dom Creation and saved variables
 const colorButtons = document.querySelectorAll('.color');
@@ -79,6 +79,7 @@ const clickColorButtons = () => {
     });
   }
 };
+
 const startGame = () => {
   restart.style.visibility = 'hidden';
   instructionsPage.style.visibility = 'hidden';
@@ -90,14 +91,31 @@ const startGame = () => {
   score = 0;
   colorNum = [];
   user = [];
+  addRandomColorToSequence();
 };
+const addRandomColorToSequence = () => {
+  element = Math.floor(Math.random() * 4);
+  colorNum.push(element);
+};
+
+// const clickColorButtons = () => {
+//   for (let i = 0; i < buttons.length - 1; i++) {
+//     buttons[i]['dom'].addEventListener('click', () => {
+//       user.push(buttons[i]['value']);
+//       winOrLoseAfter(colorNum, user);
+//     });
+//   }
+// };
 
 //Adding clickevnent functions to buttons
 playButton.addEventListener('click', () => {
   startGame();
+  addRandomColorToSequence();
 });
-restart.addEventListener('click', function () {
+
+restart.addEventListener('click', () => {
   startGame();
+  addRandomColorToSequence();
   nextLevelBackgroundChange((currentBackgroundImage = -1));
 });
 
@@ -105,19 +123,17 @@ goB.addEventListener('click', () => {
   let user = [];
   // //**Button event listeners
   // //Color Buttons to get User's Sequence
-  function clickColorButtons() {
+  const clickColorButtons = () => {
     for (let i = 0; i < buttons.length - 1; i++) {
       buttons[i]['dom'].addEventListener('click', () => {
         user.push(buttons[i]['value']);
         winOrLoseAfter(colorNum, user);
       });
     }
-  }
-
+  };
   clickColorButtons();
-  let element = 0;
-  element = Math.floor(Math.random() * 4);
-  colorNum.push(element);
+  let element;
+  addRandomColorToSequence();
   console.log(colorNum);
 
   function susanBlink(colorNum) {
